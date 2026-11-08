@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#173f35" />
+  <meta name="description" content="Volunteer Today, Change Tomorrow — discover organised, local, and international ways to make a positive difference." />
+  <title>Volunteer Today, Change Tomorrow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+:root{--forest:#173f35;--forest-deep:#10352d;--sage:#dce9dc;--lime:#d7f36b;--cream:#f7f6f0;--paper:#fffefa;--ink:#1d2b26;--muted:#65716a;--line:#dce1d8;--orange:#f0a66c;--radius:22px;--max:1200px}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--cream);color:var(--ink);font-family:'DM Sans',sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}.announcement{height:34px;background:var(--forest-deep);color:#e7f0e7;display:flex;align-items:center;justify-content:center;gap:9px;font-size:10px;letter-spacing:.09em;text-transform:uppercase}.announcement-dot{width:6px;height:6px;border-radius:50%;background:var(--lime)}.site-header{height:82px;padding:0 max(5vw,24px);display:flex;align-items:center;justify-content:space-between;background:var(--cream);position:sticky;top:0;z-index:20;border-bottom:1px solid rgba(23,63,53,.08)}.brand{display:flex;align-items:center;gap:11px}.brand-mark{width:35px;height:35px;background:var(--lime);border-radius:50%;display:grid;place-items:center;font-family:Manrope,sans-serif;font-weight:800;color:var(--forest);font-size:17px;position:relative}.brand-mark span{font-size:10px;position:absolute;right:5px;top:4px}.brand-name{font-family:Manrope,sans-serif;font-size:17px;font-weight:800;letter-spacing:-.07em;color:var(--forest)}.brand-name span{font-weight:500;color:#75857b}.main-nav{display:flex;align-items:center;gap:31px}.nav-link{font-size:12px;font-weight:600;color:#53615a;transition:color .2s}.nav-link:hover,.nav-link.active{color:var(--forest)}.nav-cta{font-size:11px;font-weight:700;color:var(--forest);background:var(--lime);padding:13px 17px;border-radius:5px}.nav-cta span{margin-left:11px}.menu-toggle{display:none}.section-shell{max-width:var(--max);margin:0 auto;padding-left:36px;padding-right:36px}.hero{min-height:635px;padding-top:83px;padding-bottom:76px;display:grid;grid-template-columns:1fr 1fr;gap:7%;align-items:center;position:relative}.eyebrow,.section-kicker{font-size:10px;letter-spacing:.16em;font-weight:700;color:#688075;display:flex;align-items:center;gap:10px}.eyebrow-line{width:27px;height:1px;background:#95a69a}.hero h1,.section-heading h2,.intro-grid h2,.how-grid h2,.closing-inner h2{font-family:Manrope,sans-serif;font-weight:600;letter-spacing:-.075em;line-height:.99;color:var(--forest)}.hero h1{font-size:clamp(52px,6vw,78px);margin:25px 0 17px}.hero h1 em,.section-heading h2 em,.intro-grid h2 em,.how-grid h2 em,.closing-inner h2 em{font-style:normal;color:#8aa28e}.hero-lead{font-size:15px;font-weight:700;letter-spacing:-.02em;margin:0 0 12px}.hero-description{max-width:440px;color:var(--muted);font-size:13px;line-height:1.9;margin:0}.hero-actions{display:flex;align-items:center;gap:25px;margin-top:29px}.button{display:inline-flex;align-items:center;gap:26px;padding:15px 19px;border-radius:4px;font-size:11px;font-weight:700;transition:transform .2s,background .2s}.button:hover{transform:translateY(-3px)}.button-dark{background:var(--forest);color:white}.button-dark:hover{background:var(--forest-deep)}.button span{font-size:16px}.text-link,.underlined-link{font-size:11px;font-weight:700;border-bottom:1px solid #abb8ae;padding-bottom:6px}.text-link span,.underlined-link span{margin-left:6px}.hero-note{display:flex;align-items:center;gap:12px;margin-top:45px;color:#7b877f;font-size:10px}.avatar-stack{display:flex;padding-left:4px}.avatar-stack i{font-style:normal;width:24px;height:24px;margin-left:-4px;border:2px solid var(--cream);border-radius:50%;display:grid;place-items:center;background:var(--sage);color:var(--forest);font-size:11px}.avatar-stack i:nth-child(2){background:#f6d5b6}.avatar-stack i:nth-child(3){background:#d7e2e8}.hero-visual{position:relative;padding:0 17px 24px 0}.hero-photo-wrap{height:430px;position:relative;border-radius:48% 48% 8px 8px;overflow:visible}.hero-photo{width:100%;height:100%;object-fit:cover;border-radius:48% 48% 8px 8px;filter:saturate(.8)}.hero-photo-wrap:after{content:'';position:absolute;inset:0;border-radius:inherit;border:1px solid rgba(255,255,255,.28);pointer-events:none}.photo-tag{position:absolute;bottom:23px;left:-25px;background:var(--lime);padding:12px 17px;display:flex;align-items:center;gap:12px;border-radius:3px;color:var(--forest);font-size:8px;line-height:1.5;letter-spacing:.1em}.photo-tag strong{font-size:12px;letter-spacing:0}.tag-icon{font-size:22px}.hero-sticker{position:absolute;right:-19px;top:20px;width:94px;height:94px;border-radius:50%;background:var(--forest);color:var(--lime);display:flex;align-items:center;justify-content:center;flex-direction:column;font-size:8px;letter-spacing:.15em;transform:rotate(12deg);box-shadow:0 8px 20px #173f3525}.hero-sticker b{font-size:22px;font-weight:400;line-height:1.2}.hero-caption{position:absolute;bottom:0;right:17px;font-size:9px;color:#758078}.hero-caption span{color:#a0aaa2;margin-left:7px}.hero-bottomline{position:absolute;bottom:23px;left:36px;right:36px;display:flex;justify-content:space-between;align-items:center;font-size:9px;letter-spacing:.13em;color:#89948c}.scroll-arrow{font-size:17px;color:var(--forest)}.intro-band{background:#e8eee5;padding:78px 0 82px}.intro-grid{display:grid;grid-template-columns:1fr 1fr 1.15fr;gap:45px;align-items:start}.intro-grid .section-kicker{padding-top:9px}.intro-grid h2{font-size:46px;margin:0}.intro-text p{font-size:13px;line-height:1.85;color:#5c6b60;margin:0 0 12px}.underlined-link{display:inline-block;margin-top:8px;color:var(--forest)}.benefits-section{padding-top:95px;padding-bottom:108px}.section-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:39px}.section-heading h2,.how-grid h2{font-size:clamp(42px,5vw,59px);margin:16px 0 0}.section-heading-side{max-width:405px}.section-heading-side p{font-size:12px;color:var(--muted);line-height:1.85;margin:0 0 21px}.section-count{font-size:9px;color:#819087;letter-spacing:.14em;font-weight:700}.benefit-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.benefit-card{min-height:205px;padding:25px 22px 22px 0;position:relative;border-right:1px solid var(--line)}.benefit-card:not(:first-child){padding-left:22px}.benefit-card:last-child{border-right:0}.benefit-icon{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:#e5ecdf;color:var(--forest);font-size:19px}.icon-skill{background:#f4e2d1}.icon-heart{background:#f0e0dc}.icon-leaf{background:#e2e8ed}.benefit-card h3{font-family:Manrope,sans-serif;font-size:15px;color:var(--forest);margin:21px 0 8px;letter-spacing:-.04em}.benefit-card p{font-size:11px;color:#738078;line-height:1.8;max-width:220px;margin:0}.card-index{position:absolute;top:29px;right:20px;font-size:9px;color:#aab4aa}.organized-section{padding-top:40px;padding-bottom:112px}.activity-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:17px}.activity-card{display:grid;grid-template-columns:.9fr 1.1fr;background:var(--paper);border:1px solid #e7e9e1;min-height:245px;overflow:hidden;transition:transform .25s,box-shadow .25s}.activity-card:hover{transform:translateY(-4px);box-shadow:0 12px 30px #173f3510}.activity-art{min-height:245px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}.art-environment{background:#dce8d8}.art-learning{background:#f3e6d6}.art-social{background:#e9e4ef}.art-charity{background:#e9e9df}.art-symbol{position:absolute;top:16px;left:18px;font-family:Manrope,sans-serif;font-size:25px;color:#315d4a;z-index:2}.art-label{position:absolute;bottom:15px;left:18px;font-size:8px;letter-spacing:.14em;color:#56705d;font-weight:700}.tree-art{width:130px;height:155px;position:relative;display:flex;align-items:center;justify-content:center;flex-direction:column}.tree-crown{font-size:117px;line-height:.9;color:#729d77;text-shadow:17px 10px 0 #9dbb8c,-14px 15px 0 #a9c59a}.tree-trunk{height:43px;width:12px;background:#967b5c;margin-top:-4px}.ground{width:145px;height:10px;background:#a5b88f;border-radius:50%;margin-top:-2px}.book-art{width:135px;height:93px;background:#c87951;transform:rotate(-12deg);border-radius:5px 12px 12px 5px;box-shadow:0 13px 0 #b1a184;display:flex;align-items:center;justify-content:center;gap:9px}.book-art:before{content:'';height:100%;width:7px;background:#f3d9b8;position:absolute;left:10px}.book-art i{width:2px;height:39px;background:#f2d4ad;display:block;opacity:.9}.people-art{height:100px;display:flex;align-items:end;gap:10px}.people-art i{width:39px;height:67px;border-radius:24px 24px 8px 8px;background:#75938a;position:relative}.people-art i:before{content:'';position:absolute;width:33px;height:33px;border-radius:50%;background:#c98d66;top:-29px;left:3px}.people-art i:nth-child(2){height:89px;background:#aa8b9f}.people-art i:nth-child(2):before{background:#9f6f52}.people-art i:nth-child(3){background:#d6a26f}.box-art{width:124px;height:100px;background:#c9ad84;transform:rotate(-5deg);display:grid;place-items:center;color:#fff8e9;font-family:Manrope;font-weight:800;font-size:18px;box-shadow:8px 9px 0 #ab8d68;border-radius:5px}.box-art i{font-style:normal;font-size:23px;color:#f3e2c7}.activity-content{padding:22px 22px 18px}.activity-meta{display:flex;justify-content:space-between;color:#8a968c;font-size:8px;letter-spacing:.13em;font-weight:700}.mini-arrow{font-size:15px;color:#627e6a}.activity-content h3{font-family:Manrope,sans-serif;color:var(--forest);font-size:17px;letter-spacing:-.04em;line-height:1.2;margin:26px 0 9px}.activity-content>p{font-size:10px;line-height:1.75;color:#738078;margin:0}.impact-note{border-top:1px solid #e8ebe4;margin-top:15px;padding-top:11px;display:flex;flex-direction:column;gap:4px}.impact-note b{font-size:9px;color:var(--forest)}.impact-note span{font-size:9px;color:#8a968c;line-height:1.5}.source-note{font-size:9px;color:#9aa39b;margin-top:18px}.local-section{background:var(--forest);color:#f6f7ef;padding:91px 0 96px}.light-heading h2{color:#f5f5ec}.light-heading h2 em{color:#b6c99f}.light-heading .section-kicker,.light-heading .section-count{color:#b3c5b4}.light-heading .section-heading-side p{color:#c3d0c5}.local-feature{display:grid;grid-template-columns:1.1fr .9fr;gap:15px;margin:50px 0 40px}.local-image{height:270px;position:relative;overflow:hidden}.local-image img{width:100%;height:100%;object-fit:cover;filter:saturate(.75)}.image-caption{position:absolute;bottom:13px;left:15px;padding:8px 11px;background:#173f35d9;font-size:9px;letter-spacing:.04em}.local-quote{background:#214c3f;display:flex;flex-direction:column;justify-content:center;padding:35px 45px;position:relative}.quote-mark{font-family:Georgia,serif;font-size:68px;line-height:.6;color:var(--lime)}.local-quote p{font-family:Manrope,sans-serif;font-size:clamp(22px,2.8vw,34px);line-height:1.15;letter-spacing:-.06em;max-width:350px;margin:18px 0 28px}.quote-byline{font-size:8px;letter-spacing:.18em;color:#c1d2bf}.local-list{border-top:1px solid #527366}.local-item{display:grid;grid-template-columns:42px 48px 1fr 140px;align-items:center;gap:15px;padding:19px 8px;border-bottom:1px solid #527366}.local-number{font-size:9px;color:#a8bdaa}.local-emoji{width:37px;height:37px;background:#315d4c;border-radius:50%;display:grid;place-items:center;font-size:17px}.local-item h3{font-family:Manrope,sans-serif;font-size:14px;letter-spacing:-.03em;margin:0 0 5px;color:#f5f7ee}.local-item p{font-size:10px;line-height:1.7;color:#c0d0c4;margin:0;max-width:610px}.local-impact{text-align:right;font-size:8px;color:var(--lime);letter-spacing:.12em;font-weight:700}.local-callout{margin-top:31px;background:#dce9d6;color:var(--forest);padding:19px 22px;display:grid;grid-template-columns:130px 1fr auto;gap:18px;align-items:center}.local-callout>span{font-size:8px;letter-spacing:.15em;font-weight:800}.local-callout p{font-size:10px;line-height:1.6;margin:0}.local-callout a{font-size:9px;font-weight:800;border-bottom:1px solid #8fa68d;padding-bottom:5px;white-space:nowrap}.local-callout a b{margin-left:6px}.global-section{padding-top:103px;padding-bottom:100px}.global-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.global-card{background:var(--paper);border:1px solid #e7e9e1;padding:21px 22px 24px;min-height:395px;display:flex;flex-direction:column;justify-content:space-between}.global-card-top{display:flex;justify-content:space-between;font-size:8px;letter-spacing:.14em;color:#829187;font-weight:700}.globe-illustration{height:180px;display:grid;place-items:center;position:relative;overflow:hidden}.globe-circle{width:130px;height:130px;border:1px solid #9bb89b;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 35% 30%,#edf3df,#dce8dc 70%);box-shadow:inset -12px -5px 0 #c7d9cb}.globe-circle span{font-size:57px;filter:saturate(.7)}.orbit{position:absolute;width:190px;height:70px;border:1px solid #9bb89b;border-radius:50%;transform:rotate(-25deg)}.orbit-two{transform:rotate(65deg);width:160px;border-color:#d6b17f}.relief-illustration{background:linear-gradient(135deg,#f6eadc,#f0e1d1);margin:16px 0}.relief-box{width:92px;height:82px;background:#d49b6c;box-shadow:9px 10px 0 #bb8057;display:grid;place-items:center;color:#fff7e9;font-size:54px;font-weight:400;z-index:1}.relief-heart{position:absolute;right:26%;top:27%;font-size:36px;color:#a75f56;transform:rotate(15deg)}.education-illustration{background:linear-gradient(135deg,#e5e8f0,#e3e8e9);margin:16px 0}.screen-art{width:145px;height:100px;background:#52786e;border:8px solid #d0d9d0;border-radius:8px;display:flex;justify-content:center;align-items:center;color:#f5f4e9;font-family:Manrope;font-size:35px;font-weight:800;box-shadow:0 9px 0 #a8b3ac;z-index:1}.screen-art i{font-style:normal;position:absolute;font-size:20px;bottom:32px;right:29%;color:#d7f36b}.speech-art{position:absolute;top:23px;left:22%;background:#fffefa;padding:8px 11px;border-radius:15px;font-size:8px;color:#587568;letter-spacing:.1em}.global-card h3{font-family:Manrope,sans-serif;font-size:18px;letter-spacing:-.05em;color:var(--forest);margin:10px 0 9px}.global-card p{font-size:10px;line-height:1.8;color:#748078;margin:0}.global-impact{display:flex;flex-direction:column;gap:5px;border-top:1px solid #e5e9e0;margin-top:17px;padding-top:12px}.global-impact b{font-size:9px;color:var(--forest)}.global-impact span{font-size:9px;color:#89938c;line-height:1.55}.global-footnote{display:flex;align-items:center;gap:15px;margin-top:21px;background:#e7eee4;padding:17px 20px}.global-footnote-icon{color:var(--forest);font-size:20px}.global-footnote p{font-size:10px;line-height:1.7;color:#617267;margin:0}.how-section{background:#e9eee6;padding:85px 0}.how-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:10%;align-items:center}.how-grid h2{font-size:50px}.how-intro{font-size:12px;color:#78857c;line-height:1.8;max-width:290px;margin-top:20px}.steps-list{border-top:1px solid #cbd6ca}.step{display:grid;grid-template-columns:45px 1fr;gap:15px;padding:17px 0;border-bottom:1px solid #cbd6ca}.step>span{font-size:10px;color:#829488;padding-top:3px}.step h3{font-family:Manrope,sans-serif;font-size:14px;color:var(--forest);margin:0 0 5px}.step p{font-size:10px;color:#748078;line-height:1.7;margin:0}.about-section{padding-top:105px;padding-bottom:106px}.team-editor-note{display:flex;align-items:center;gap:13px;background:#e8eee4;border:1px solid #dbe5d8;padding:15px 18px;margin-bottom:23px;color:#657569;font-size:10px;line-height:1.7}.team-editor-note b{color:var(--forest)}.note-star{font-size:20px;color:#799778}.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.team-card{background:var(--paper);border:1px solid #e7e9e1;padding:14px 14px 18px}.portrait-frame{height:225px;position:relative;overflow:hidden;display:grid;place-items:center}.portrait-one{background:#dfe8dc}.portrait-two{background:#efe2d3}.portrait-three{background:#e3e4ed}.portrait-placeholder{display:flex;flex-direction:column;align-items:center;color:#66806e;position:relative}.portrait-placeholder>span{font-size:9px;letter-spacing:.15em;margin-bottom:12px}.portrait-placeholder b{font-family:Manrope,sans-serif;font-size:32px;line-height:.95;letter-spacing:-.08em;text-align:center;color:#76927b}.portrait-two .portrait-placeholder b{color:#b78968}.portrait-three .portrait-placeholder b{color:#7d819d}.portrait-placeholder small{font-size:9px;letter-spacing:.12em;margin-top:12px;color:#89978c;text-transform:uppercase}.member-preview{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}.upload-button{display:flex;align-items:center;justify-content:center;gap:6px;margin:11px 0 17px;padding:9px;border:1px dashed #aabaaa;color:#587363;font-size:9px;font-weight:700;cursor:pointer;transition:background .2s}.upload-button:hover{background:#eff4ec}.upload-button input{display:none}.field-label{display:block;font-size:8px;color:#8c998e;letter-spacing:.14em;font-weight:700;margin:12px 0 6px}.member-name,.member-bio{width:100%;border:1px solid #e1e6de;background:#fbfcf8;padding:9px 10px;color:var(--forest);font-size:10px;border-radius:2px;outline:none}.member-name:focus,.member-bio:focus{border-color:#87a18c;box-shadow:0 0 0 2px #dce9dc}.member-bio{resize:vertical;line-height:1.6;min-height:73px}.member-role{border-top:1px solid #e7eae3;margin-top:16px;padding-top:13px}.member-role span{display:block;font-size:8px;letter-spacing:.13em;color:#929e93;margin-bottom:6px}.member-role b{font-family:Manrope,sans-serif;font-size:12px;color:var(--forest)}.member-role p{font-size:9px;color:#8b968d;line-height:1.6;margin:5px 0 0}.photo-reminder{font-size:9px;color:#8d9990;line-height:1.7;margin-top:18px}.closing-section{position:relative;background:var(--forest);overflow:hidden;color:#fff;padding:91px 0 50px;text-align:center}.closing-inner{position:relative;z-index:1}.closing-inner .section-kicker{justify-content:center;color:#b9ccba}.closing-inner h2{font-size:clamp(54px,7vw,82px);color:#fbfcf5;margin:26px 0 17px}.closing-inner h2 em{color:var(--lime)}.closing-inner>p{font-size:12px;color:#c5d1c7;line-height:1.8;max-width:490px;margin:0 auto}.button-lime{background:var(--lime);color:var(--forest);margin-top:27px}.button-lime:hover{background:#e5fa9a}.closing-orbit{position:absolute;width:270px;height:270px;border-radius:50%;border:1px solid #ffffff18;display:grid;place-items:center;color:#ffffff22;font-size:65px}.orbit-left{left:-95px;top:15px}.orbit-right{right:-70px;bottom:-150px}.closing-mantra{border-top:1px solid #557568;margin-top:82px;padding-top:19px;display:flex;justify-content:center;align-items:center;gap:19px;flex-wrap:wrap;color:#b9c9bb;font-size:8px;letter-spacing:.16em}.closing-mantra i{font-style:normal;color:var(--lime);font-size:12px}.site-footer{background:#102f28;color:#f5f7ed;padding:26px max(5vw,24px) 17px}.footer-top{display:flex;justify-content:space-between;align-items:center;padding-bottom:25px}.footer-brand .brand-mark{background:var(--lime)}.footer-brand .brand-name{color:#f5f7ed}.footer-brand .brand-name span{color:#b8c9bb}.footer-top>p{font-size:10px;color:#aebeb2}.back-top{font-size:8px;letter-spacing:.13em;color:#c6d4c8}.footer-bottom{border-top:1px solid #34564a;padding-top:15px;display:flex;justify-content:space-between;color:#80988a;font-size:8px}.sources{margin-top:21px}.sources details{border-top:1px solid #34564a;padding-top:12px}.sources summary{font-size:9px;color:#b7c7b9;cursor:pointer;letter-spacing:.04em}.source-links{display:flex;flex-wrap:wrap;gap:8px 19px;padding:13px 0 0}.source-links a{font-size:9px;color:#9db2a2;text-decoration:underline;text-underline-offset:3px}.source-links a:hover{color:var(--lime)}
+@media(max-width:900px){.main-nav{gap:17px}.hero{gap:4%;min-height:600px}.hero-photo-wrap{height:370px}.section-shell{padding-left:27px;padding-right:27px}.activity-card{grid-template-columns:.8fr 1.2fr}.activity-content{padding:18px}.local-item{grid-template-columns:30px 42px 1fr 110px;gap:10px}.global-card{padding:17px;min-height:410px}.portrait-frame{height:185px}}
+@media(max-width:680px){.announcement{font-size:8px}.site-header{height:69px;padding:0 20px}.menu-toggle{display:flex;border:0;background:none;width:35px;height:35px;flex-direction:column;justify-content:center;gap:6px;cursor:pointer}.menu-toggle span{height:1.5px;width:22px;background:var(--forest);display:block}.main-nav{display:none;position:absolute;top:69px;left:0;right:0;background:var(--cream);padding:13px 22px 22px;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;box-shadow:0 15px 20px #173f3510}.main-nav.open{display:flex}.nav-link{padding:13px 0;border-bottom:1px solid #e8ebe4}.nav-cta{margin-top:14px;text-align:center}.section-shell{padding-left:21px;padding-right:21px}.hero{display:flex;flex-direction:column;align-items:stretch;padding-top:59px;padding-bottom:80px;gap:36px}.hero h1{font-size:clamp(51px,13vw,72px)}.hero-description{font-size:12px}.hero-note{margin-top:30px}.hero-visual{margin:0 9px 0 16px;padding-right:10px}.hero-photo-wrap{height:350px}.hero-sticker{right:-11px;width:77px;height:77px;font-size:7px}.hero-sticker b{font-size:18px}.photo-tag{left:-14px}.hero-bottomline{left:21px;right:21px;bottom:24px}.hero-caption{font-size:8px}.intro-band{padding:56px 0}.intro-grid{grid-template-columns:1fr;gap:19px}.intro-grid h2{font-size:43px}.intro-text{max-width:530px}.benefits-section{padding-top:65px;padding-bottom:72px}.section-heading{align-items:flex-start;flex-direction:column;gap:17px;margin-bottom:29px}.section-heading h2,.how-grid h2{font-size:47px}.section-heading-side{max-width:100%}.section-heading-side p{margin-bottom:11px}.benefit-grid{grid-template-columns:repeat(2,1fr)}.benefit-card{min-height:190px;padding:20px 13px 18px 0}.benefit-card:not(:first-child){padding-left:13px}.benefit-card:nth-child(2){border-right:0}.benefit-card:nth-child(-n+2){border-bottom:1px solid var(--line)}.benefit-card h3{font-size:13px;margin-top:15px}.benefit-card p{font-size:10px}.organized-section{padding-top:10px;padding-bottom:71px}.activity-grid{grid-template-columns:1fr}.activity-card{grid-template-columns:.85fr 1.15fr;min-height:230px}.activity-art{min-height:230px}.activity-content h3{font-size:16px;margin-top:20px}.local-section{padding:66px 0}.local-feature{grid-template-columns:1fr;gap:10px;margin:32px 0 26px}.local-image{height:220px}.local-quote{min-height:190px;padding:24px 29px}.local-quote p{font-size:28px}.local-item{grid-template-columns:25px 36px 1fr;gap:9px;padding:15px 0}.local-emoji{width:32px;height:32px;font-size:14px}.local-item h3{font-size:12px}.local-item p{font-size:9px}.local-impact{grid-column:3;text-align:left;font-size:7px;margin-top:1px}.local-callout{grid-template-columns:1fr;gap:9px;padding:16px}.local-callout p{font-size:10px}.local-callout a{justify-self:start}.global-section{padding-top:71px;padding-bottom:70px}.global-cards{grid-template-columns:1fr;gap:12px}.global-card{min-height:auto;padding:19px}.globe-illustration{height:155px}.global-card h3{margin-top:12px}.global-footnote{align-items:flex-start;padding:14px}.how-section{padding:65px 0}.how-grid{grid-template-columns:1fr;gap:29px}.how-grid h2{font-size:45px}.about-section{padding-top:71px;padding-bottom:72px}.team-grid{grid-template-columns:1fr;gap:15px}.team-card{padding:13px}.portrait-frame{height:250px}.team-editor-note{align-items:flex-start}.closing-section{padding-top:75px}.closing-inner h2{font-size:clamp(51px,13vw,75px)}.closing-inner>p{font-size:11px}.closing-mantra{margin-top:62px;gap:11px;font-size:7px}.footer-top{gap:14px;flex-wrap:wrap}.footer-top>p{order:3;width:100%;margin:0}.footer-bottom{gap:9px;flex-direction:column}.source-links{flex-direction:column;gap:10px}}
+@media(max-width:390px){.activity-card{grid-template-columns:1fr}.activity-art{min-height:170px}.activity-content{padding:17px}.activity-content h3{margin-top:16px}.hero-photo-wrap{height:300px}.local-item{grid-template-columns:20px 31px 1fr;gap:7px}.local-number{font-size:8px}.local-emoji{width:29px;height:29px}.hero-actions{gap:15px}.button{gap:12px;padding:14px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}}
+
+.org-link{display:flex;flex-direction:column;gap:5px;margin-top:14px;padding:12px 14px;background:#eef4ea;border:1px solid #d5e2cf;border-left:3px solid var(--forest);border-radius:4px;transition:background .2s,transform .2s}
+.org-link:hover,.org-link:focus-visible{background:#e3eedc;transform:translateX(3px)}
+.org-tag{font-size:8px;letter-spacing:.13em;font-weight:700;color:#6a8573}
+.org-link b{font-family:Manrope,sans-serif;font-size:13px;color:var(--forest);letter-spacing:-.03em}
+.org-link small{font-size:10px;line-height:1.6;color:#6b786f}
+.org-go{font-size:9px;font-weight:800;color:var(--forest);margin-top:2px}
+.org-go i,.org-chip i{font-style:normal}
+.global-card .org-link{margin-top:16px}
+.local-item .org-chip{display:inline-block;margin-top:9px;font-size:9px;font-weight:700;color:var(--lime);border-bottom:1px solid #6f9484;padding-bottom:2px}
+.local-item .org-chip span{color:#a8bdaa;font-weight:500}
+.local-item .org-chip:hover{color:#fff}
+.art-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;filter:saturate(.85)}
+.has-photo .art-symbol,.has-photo .art-label{z-index:2;color:#fff;text-shadow:0 1px 6px #0007}
+.has-photo .art-illustration{display:none}
+.org-link:focus-visible,.org-chip:focus-visible{outline:2px solid var(--lime);outline-offset:2px}
+
+.photo-credit{position:absolute;right:8px;bottom:6px;z-index:3;font-size:8px;letter-spacing:.04em;color:#fff;background:#173f35b3;padding:3px 6px;border-radius:2px}
+.has-photo>*:not(.art-photo):not(.photo-credit):not(.art-symbol):not(.art-label){display:none!important}
+.has-photo .art-symbol{display:block}
+.globe-illustration.has-photo{height:180px;margin:16px 0;background:#dfe8dc}
+.globe-illustration.has-photo .art-photo{border-radius:2px}
+
+/* aligned photo cards */
+.global-card{justify-content:flex-start}
+.globe-illustration.has-photo{height:200px;margin:16px 0 18px;background:#dfe8dc;overflow:hidden;display:block}
+.globe-illustration.has-photo .art-photo{border-radius:2px}
+.global-card>div:last-child{display:flex;flex-direction:column;flex:1}
+.global-card h3{min-height:2.4em;display:flex;align-items:flex-end;margin-top:0}
+.global-impact{margin-bottom:4px}
+.global-card .org-link{margin-top:auto}
+.global-card .global-impact{margin-bottom:16px}
+.zoomable{cursor:zoom-in}
+.photo-credit{text-decoration:none;cursor:pointer}
+a.photo-credit:hover{background:#173f35;text-decoration:underline}
+.hero-caption a,.image-caption a{text-decoration:underline;text-underline-offset:2px}
+.lightbox{position:fixed;inset:0;z-index:100;background:rgba(10,24,20,.92);display:flex;flex-direction:column}
+.lightbox[hidden]{display:none}
+.lb-bar{display:flex;align-items:center;gap:14px;padding:12px 18px;color:#f3f6ee;font-size:12px}
+.lb-caption{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lb-source{color:var(--lime);text-decoration:underline;text-underline-offset:3px;font-weight:700;white-space:nowrap}
+.lb-tools{display:flex;gap:6px}
+.lb-tools button{min-width:38px;height:38px;border:1px solid #ffffff40;background:#ffffff14;color:#fff;border-radius:6px;font-size:16px;cursor:pointer}
+.lb-tools button:hover{background:#ffffff30}
+.lb-stage{flex:1;overflow:hidden;display:grid;place-items:center;touch-action:none;cursor:grab}
+.lb-stage.dragging{cursor:grabbing}
+.lb-stage img{max-width:94vw;max-height:78vh;object-fit:contain;transform-origin:center;user-select:none;-webkit-user-drag:none;will-change:transform}
+.lb-hint{margin:0;padding:8px;text-align:center;font-size:10px;color:#b9c9bb}
+body.lb-open{overflow:hidden}
+@media(max-width:680px){.lb-caption{display:none}.lb-bar{justify-content:space-between}}
+
+  
+/* Static team biodata: edit the content in standalone.html, not in the browser. */
+.team-card > h3.member-name{display:block;width:auto;margin:14px 0 7px;padding:0;border:0;border-radius:0;background:transparent;color:var(--forest);font-family:Manrope,sans-serif;font-size:15px;font-weight:700;line-height:1.35}
+.team-card > p.member-bio{width:auto;min-height:0;margin:0;padding:0;border:0;border-radius:0;background:transparent;color:#738078;font-size:10px;line-height:1.75;resize:none;overflow-wrap:anywhere}
+</style>
+</head>
+<body>
+  <div class="announcement"><span class="announcement-dot"></span> A little help can create a lasting impact.</div>
+  <header class="site-header" id="top">
+    <a class="brand" href="#home" aria-label="Volunteer Today homepage">
+      <span class="brand-mark">V<span>+</span></span>
+      <span class="brand-name">voluntree<span>today.</span></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mainNav">
+      <span></span><span></span>
+    </button>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#organised" class="nav-link">Organised</a>
+      <a href="#local" class="nav-link">Local</a>
+      <a href="#international" class="nav-link">Global</a>
+      <a href="#about" class="nav-link">About us</a>
+      <a href="#closing" class="nav-cta">Make a difference <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-shell" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-line"></span> THE POWER OF GIVING BACK</div>
+        <h1>Voluntree today.<br><em>Change tomorrow.</em></h1>
+        <p class="hero-lead">Small actions. Big impact. A better world.</p>
+        <p class="hero-description">Welcome! Your time, skills, and kindness can help build stronger communities. Discover meaningful ways to support people and protect our planet.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#organised">Explore opportunities <span>↘</span></a>
+          <a class="text-link" href="#why-volunteer">Why volunteer? <span>↗</span></a>
+        </div>
+        <div class="hero-note"><span class="avatar-stack"><i>✳</i><i>♥</i><i>＋</i></span><span>One community. Many ways to help.</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-photo-wrap">
+          <img class="hero-photo zoomable" src="https://cdn.antaranews.com/cache/1200x800/2022/11/29/IMG-20221129-WA0000.jpg" alt="Young volunteers and community members planting mangrove seedlings on a tropical beach" />
+          <div class="photo-tag"><span class="tag-icon">✳</span><span>ACT LOCALLY<br><strong>Grow together</strong></span></div>
+        </div>
+        <div class="hero-sticker" aria-hidden="true"><span>GIVE</span><b>♡</b><span>YOUR TIME</span></div>
+        <div class="hero-caption">Community mangrove planting · Indonesia <span>Photo: <a href="https://www.antaranews.com" target="_blank" rel="noopener noreferrer">ANTARA News ↗</a></span></div>
+      </div>
+      <div class="hero-bottomline"><span>01 / 06</span><span>SCROLL TO EXPLORE</span><span class="scroll-arrow">↓</span></div>
+    </section>
+
+    <section class="intro-band" id="why-volunteer">
+      <div class="section-shell intro-grid">
+        <div class="section-kicker">01 — UNDERSTANDING VOLUNTEERING</div>
+        <div>
+          <h2>Be part of<br><em>something good.</em></h2>
+        </div>
+        <div class="intro-text">
+          <p>Volunteering means freely giving your time, energy, or skills to support others and contribute to the common good. The goal is to help—not to receive financial rewards.</p>
+          <p>It connects people, builds trust, and turns shared concerns into positive action.</p>
+          <a class="underlined-link" href="https://knowledge.unv.org/index.php/glossary" target="_blank" rel="noopener">Explore the UN Volunteers definition <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits-section section-shell">
+      <div class="section-heading compact-heading">
+        <div><div class="section-kicker">WHY IT MATTERS</div><h2>Good for others.<br><em>Good for you, too.</em></h2></div>
+        <p>Volunteering creates shared value. It can respond to real needs while helping volunteers learn, connect, and grow.</p>
+      </div>
+      <div class="benefit-grid">
+        <article class="benefit-card"><span class="benefit-icon icon-sun">✳</span><h3>Stronger communities</h3><p>People work together, build trust, and support neighbours who need a helping hand.</p><span class="card-index">01</span></article>
+        <article class="benefit-card"><span class="benefit-icon icon-skill">↗</span><h3>Useful life skills</h3><p>Volunteers practise communication, teamwork, problem-solving, and responsibility.</p><span class="card-index">02</span></article>
+        <article class="benefit-card"><span class="benefit-icon icon-heart">♡</span><h3>More understanding</h3><p>Working with different people can grow empathy, respect, and a sense of belonging.</p><span class="card-index">03</span></article>
+        <article class="benefit-card"><span class="benefit-icon icon-leaf">❋</span><h3>Positive change</h3><p>Small, consistent actions can contribute to healthier places and a more caring society.</p><span class="card-index">04</span></article>
+      </div>
+    </section>
+
+    <section class="organized-section section-shell" id="organised">
+      <div class="section-heading">
+        <div><div class="section-kicker">02 — WORKING TOGETHER</div><h2>Organised<br><em>volunteering.</em></h2></div>
+        <div class="section-heading-side"><p>Organised volunteering is coordinated by a school, foundation, charity, community group, or non-profit organisation. Teams plan activities, share responsibilities, and work toward a common goal.</p><span class="section-count">04 WAYS TO GET INVOLVED</span></div>
+      </div>
+      <div class="activity-grid organised-grid" id="organisedGrid">
+        <article class="activity-card activity-feature" data-category="planet">
+          <div class="activity-art art-environment has-photo"><img class="art-photo zoomable" src="https://cdn.antaranews.com/cache/1200x800/2022/11/29/IMG-20221129-WA0000.jpg" alt="Volunteers planting mangrove seedlings on a beach in Indonesia" loading="lazy" onerror="var c=this.nextElementSibling;if(c&&c.classList.contains('photo-credit'))c.remove();this.parentElement.classList.remove('has-photo');this.remove()"><a class="photo-credit" href="https://www.antaranews.com" target="_blank" rel="noopener noreferrer" title="Open the photo's source">Photo: ANTARA News ↗</a><span class="art-symbol">✳</span><span class="art-label">CARE FOR NATURE</span><div class="art-illustration tree-art"><span class="tree-crown">●</span><span class="tree-trunk"></span><span class="ground"></span></div></div>
+          <div class="activity-content"><div class="activity-meta"><span>01 / ENVIRONMENT</span><span class="mini-arrow">↗</span></div><h3>Environmental volunteering</h3><p>Join a group to clean public spaces, plant native trees, restore mangroves, or teach people about reducing waste.</p><div class="impact-note"><b>Positive impact</b><span>Cleaner surroundings and greater environmental awareness.</span></div><a class="org-link " href="https://wwf.id/en/id/volunteer" target="_blank" rel="noopener noreferrer"><span class="org-tag">NATIONAL · CONSERVATION</span><b>WWF-Indonesia</b><small>A conservation organisation working on nature and wildlife protection; it runs volunteer programmes.</small><span class="org-go">Visit organisation <i>↗</i></span></a></div>
+        </article>
+        <article class="activity-card" data-category="learning">
+          <div class="activity-art art-learning has-photo"><img class="art-photo zoomable" src="https://commons.wikimedia.org/wiki/Special:FilePath/Student_Study-Service_in_Indonesia.JPG?width=900" alt="Students taking part in a study-service programme in Indonesia" loading="lazy" referrerpolicy="no-referrer" onerror="var c=this.nextElementSibling;if(c&&c.classList.contains('photo-credit'))c.remove();this.parentElement.classList.remove('has-photo');this.remove()"><a class="photo-credit" href="https://commons.wikimedia.org/wiki/File:Student_Study-Service_in_Indonesia.JPG" target="_blank" rel="noopener noreferrer" title="Open the photo's source page">Photo: Wikimedia Commons ↗</a><span class="art-symbol">Aa</span><div class="book-art"><i></i><i></i><i></i></div><span class="art-label">SHARE WHAT YOU KNOW</span></div>
+          <div class="activity-content"><div class="activity-meta"><span>02 / EDUCATION</span><span class="mini-arrow">↗</span></div><h3>Educational volunteering</h3><p>Support reading clubs, homework sessions, language practice, or creative workshops organised by a school or learning centre.</p><div class="impact-note"><b>Positive impact</b><span>More learning support and confidence for students.</span></div><a class="org-link " href="https://indonesiamengajar.org" target="_blank" rel="noopener noreferrer"><span class="org-tag">NATIONAL · EDUCATION</span><b>Indonesia Mengajar</b><small>A movement that sends young graduates to teach and support learning in remote communities.</small><span class="org-go">Visit organisation <i>↗</i></span></a></div>
+        </article>
+        <article class="activity-card" data-category="people">
+          <div class="activity-art art-social has-photo"><img class="art-photo zoomable" src="https://commons.wikimedia.org/wiki/Special:FilePath/Aktivitas_Kerja_Bakti_Warga_1.jpg?width=900" alt="Residents working together in a community clean-up in Indonesia" loading="lazy" referrerpolicy="no-referrer" onerror="var c=this.nextElementSibling;if(c&&c.classList.contains('photo-credit'))c.remove();this.parentElement.classList.remove('has-photo');this.remove()"><a class="photo-credit" href="https://commons.wikimedia.org/wiki/File:Aktivitas_Kerja_Bakti_Warga_1.jpg" target="_blank" rel="noopener noreferrer" title="Open the photo's source page">Photo: Wikimedia Commons ↗</a><span class="art-symbol">♡</span><div class="people-art"><i></i><i></i><i></i></div><span class="art-label">SHOW UP FOR PEOPLE</span></div>
+          <div class="activity-content"><div class="activity-meta"><span>03 / SOCIAL SUPPORT</span><span class="mini-arrow">↗</span></div><h3>Social volunteering</h3><p>Help organise inclusive community events, visit older adults with a supervised group, or prepare activity packs for families.</p><div class="impact-note"><b>Positive impact</b><span>Less social isolation and stronger community connections.</span></div><a class="org-link " href="https://sejiwa.org/en/shift/" target="_blank" rel="noopener noreferrer"><span class="org-tag">NATIONAL · YOUTH &amp; SOCIAL</span><b>SEJIWA</b><small>An Indonesian organisation behind the SHIFT youth campaign, which encourages young people to take positive action.</small><span class="org-go">Visit organisation <i>↗</i></span></a></div>
+        </article>
+        <article class="activity-card" data-category="people">
+          <div class="activity-art art-charity has-photo"><img class="art-photo zoomable" src="https://commons.wikimedia.org/wiki/Special:FilePath/FEMA_-_39206_-_Red_Cross_loading_food_containers_in_Texas.jpg?width=900" alt="Red Cross volunteers loading food containers for people in need" loading="lazy" referrerpolicy="no-referrer" onerror="var c=this.nextElementSibling;if(c&&c.classList.contains('photo-credit'))c.remove();this.parentElement.classList.remove('has-photo');this.remove()"><a class="photo-credit" href="https://commons.wikimedia.org/wiki/File:FEMA_-_39206_-_Red_Cross_loading_food_containers_in_Texas.jpg" target="_blank" rel="noopener noreferrer" title="Open the photo's source page">Photo: Wikimedia Commons ↗</a><span class="art-symbol">＋</span><div class="box-art"><span>GIVE</span><i>♡</i></div><span class="art-label">SHARE WHAT YOU CAN</span></div>
+          <div class="activity-content"><div class="activity-meta"><span>04 / HUMANITARIAN</span><span class="mini-arrow">↗</span></div><h3>Charity and humanitarian work</h3><p>Sort donated goods, prepare care packages, or support a verified charity's fundraising and community distribution activities.</p><div class="impact-note"><b>Positive impact</b><span>Practical support reaches people facing difficult situations.</span></div><a class="org-link " href="https://pmi.or.id" target="_blank" rel="noopener noreferrer"><span class="org-tag">NATIONAL · HUMANITARIAN</span><b>Indonesian Red Cross (PMI)</b><small>Provides disaster response, health and blood services, and relies on trained volunteers.</small><span class="org-go">Visit organisation <i>↗</i></span></a></div>
+        </article>
+      </div>
+      <div class="source-note">The activities are ideas; the organisations are real examples where you can learn more. Programmes, schedules, age limits and eligibility depend on each organisation, so always check their website first.</div>
+    </section>
+
+    <section class="local-section" id="local">
+      <div class="section-shell local-inner">
+        <div class="section-heading light-heading">
+          <div><div class="section-kicker">03 — START WHERE YOU ARE</div><h2>Local action.<br><em>Real impact.</em></h2></div>
+          <div class="section-heading-side"><p>You do not need to travel far to make a difference. In Indonesia, neighbours, students, and local groups can work together to respond to needs close to home.</p><span class="section-count">COMMUNITY-BASED IDEAS</span></div>
+        </div>
+        <div class="local-feature">
+          <div class="local-image"><img class="zoomable" src="https://asset.kompas.com/crops/BmIJUokUmEMoSKv349HKF8ieb4s%3D/0x0%3A4160x2773/1200x800/data/photo/2025/07/29/6888b6a9698d4.jpeg" alt="Volunteers planting young mangrove trees together" loading="lazy"><span class="image-caption">Mangrove planting · Indonesia · Photo: <a href="https://www.kompas.com" target="_blank" rel="noopener noreferrer">Kompas.com ↗</a></span></div>
+          <div class="local-quote"><span class="quote-mark">“</span><p>Change often begins with people caring for the place they call home.</p><span class="quote-byline">THINK GLOBALLY, ACT LOCALLY.</span></div>
+        </div>
+        <div class="local-list">
+          <article class="local-item"><span class="local-number">01</span><span class="local-emoji">🧤</span><div><h3>Neighbourhood or beach clean-up</h3><p>Work with residents to collect litter and sort recyclable materials. This helps keep shared spaces cleaner and encourages responsible waste habits.</p><a class="org-chip" href="https://wwf.id/en/id/volunteer" target="_blank" rel="noopener noreferrer"><span>Learn more:</span> WWF-Indonesia <i>↗</i></a></div><span class="local-impact">CLEANER PLACES</span></article>
+          <article class="local-item"><span class="local-number">02</span><span class="local-emoji">📚</span><div><h3>Reading and learning support</h3><p>Help children practise reading, basic English, or school subjects through a supervised school or community programme. This gives learners extra support and encouragement.</p><a class="org-chip" href="https://indonesiamengajar.org" target="_blank" rel="noopener noreferrer"><span>Learn more:</span> Indonesia Mengajar <i>↗</i></a></div><span class="local-impact">LEARNING FOR ALL</span></article>
+          <article class="local-item"><span class="local-number">03</span><span class="local-emoji">🥫</span><div><h3>Food and clothing donations</h3><p>Help a trusted community group collect, sort, and distribute useful goods. Careful sorting makes donations more practical and respectful for recipients.</p><a class="org-chip" href="https://foodcycle.id/volunteering/" target="_blank" rel="noopener noreferrer"><span>Learn more:</span> FoodCycle Indonesia <i>↗</i></a></div><span class="local-impact">SHARED RESOURCES</span></article>
+          <article class="local-item"><span class="local-number">04</span><span class="local-emoji">🌱</span><div><h3>Tree and mangrove planting</h3><p>Join a properly planned planting activity using suitable local species. It can support habitat restoration and help communities care for green spaces and coastlines.</p><a class="org-chip" href="https://www.rinjanilombok.org/get-involved/volunteer" target="_blank" rel="noopener noreferrer"><span>Learn more:</span> Rinjani-Lombok MIDAS <i>↗</i></a></div><span class="local-impact">HEALTHIER ECOSYSTEMS</span></article>
+          <article class="local-item"><span class="local-number">05</span><span class="local-emoji">☀️</span><div><h3>Companionship for older people</h3><p>Take part in a school- or organisation-supervised visit, conversation, or shared activity. Friendly contact can help older neighbours feel included and valued.</p><a class="org-chip" href="https://pmi.or.id" target="_blank" rel="noopener noreferrer"><span>Learn more:</span> Indonesian Red Cross (PMI) <i>↗</i></a></div><span class="local-impact">STRONGER CONNECTIONS</span></article>
+        </div>
+        <div class="local-callout"><span>LOCAL EXAMPLE</span><p>FoodCycle Indonesia describes volunteer activities such as preparing, packing, and distributing surplus food to local communities.</p><a href="https://foodcycle.id/volunteering/" target="_blank" rel="noopener">See FoodCycle volunteering <b>↗</b></a></div>
+      </div>
+    </section>
+
+    <section class="global-section section-shell" id="international">
+      <div class="section-heading">
+        <div><div class="section-kicker">04 — BEYOND BORDERS</div><h2>Think global.<br><em>Care together.</em></h2></div>
+        <div class="section-heading-side"><p>International volunteering connects people and organisations across countries. It can support long-term cooperation on challenges that affect the whole world.</p><span class="section-count">GLOBAL IDEAS</span></div>
+      </div>
+      <div class="global-cards">
+        <article class="global-card global-card-one"><div class="global-card-top"><span>01 / PLANET</span><span>↗</span></div><div class="globe-illustration has-photo"><img class="art-photo zoomable" src="https://commons.wikimedia.org/wiki/Special:FilePath/Coral_Restoration.jpg?width=900" alt="Coral restoration work on a reef" loading="lazy" referrerpolicy="no-referrer" onerror="var c=this.nextElementSibling;if(c&&c.classList.contains('photo-credit'))c.remove();this.parentElement.classList.remove('has-photo');this.remove()"><a class="photo-credit" href="https://commons.wikimedia.org/wiki/File:Coral_Restoration.jpg" target="_blank" rel="noopener noreferrer" title="Open the photo's source page">Photo: Wikimedia Commons ↗</a><div class="globe-circle"><span>🌍</span></div><i class="orbit orbit-one"></i><i class="orbit orbit-two"></i></div><div><h3>Environmental conservation</h3><p>Join cross-country awareness campaigns, citizen-science projects, or coordinated habitat restoration led by qualified local partners.</p><div class="global-impact"><b>Global impact</b><span>Shared knowledge and cooperation can strengthen biodiversity and climate action.</span></div><a class="org-link " href="https://wwf.panda.org" target="_blank" rel="noopener noreferrer"><span class="org-tag">INTERNATIONAL · CONSERVATION</span><b>WWF (World Wide Fund for Nature)</b><small>A global conservation network active in many countries, working on wildlife, forests, oceans and climate.</small><span class="org-go">Visit organisation <i>↗</i></span></a></div></article>
+        <article class="global-card global-card-two"><div class="global-card-top"><span>02 / HUMANITY</span><span>↗</span></div><div class="globe-illustration relief-illustration has-photo"><img class="art-photo zoomable" src="https://commons.wikimedia.org/wiki/Special:FilePath/FEMA_-_35444_-_Red_Cross_deliving_supplies_to_volunteers_in_Colorado.jpg?width=900" alt="Red Cross delivering supplies to volunteers during a disaster response" loading="lazy" referrerpolicy="no-referrer" onerror="var c=this.nextElementSibling;if(c&&c.classList.contains('photo-credit'))c.remove();this.parentElement.classList.remove('has-photo');this.remove()"><a class="photo-credit" href="https://commons.wikimedia.org/wiki/File:FEMA_-_35444_-_Red_Cross_deliving_supplies_to_volunteers_in_Colorado.jpg" target="_blank" rel="noopener noreferrer" title="Open the photo's source page">Photo: Wikimedia Commons ↗</a><div class="relief-box">＋</div><span class="relief-heart">♡</span></div><div><h3>Disaster relief and recovery</h3><p>Support trusted humanitarian organisations through carefully coordinated fundraising, supply sorting, translation, or recovery education projects.</p><div class="global-impact"><b>Global impact</b><span>Communities can receive more coordinated support and resources during recovery.</span></div><a class="org-link " href="https://www.ifrc.org/get-involved/volunteer-us" target="_blank" rel="noopener noreferrer"><span class="org-tag">INTERNATIONAL · HUMANITARIAN</span><b>IFRC</b><small>The International Federation of Red Cross and Red Crescent Societies, supporting volunteers and disaster response worldwide.</small><span class="org-go">Visit organisation <i>↗</i></span></a></div></article>
+        <article class="global-card global-card-three"><div class="global-card-top"><span>03 / EDUCATION</span><span>↗</span></div><div class="globe-illustration education-illustration has-photo"><img class="art-photo zoomable" src="https://commons.wikimedia.org/wiki/Special:FilePath/USAID_Basic_Education_Program_(8313184050).jpg?width=900" alt="Children in a school supported by an international basic education programme" loading="lazy" referrerpolicy="no-referrer" onerror="var c=this.nextElementSibling;if(c&&c.classList.contains('photo-credit'))c.remove();this.parentElement.classList.remove('has-photo');this.remove()"><a class="photo-credit" href="https://commons.wikimedia.org/wiki/File:USAID_Basic_Education_Program_(8313184050).jpg" target="_blank" rel="noopener noreferrer" title="Open the photo's source page">Photo: Wikimedia Commons ↗</a><div class="screen-art"><span>abc</span><i>↔</i></div><span class="speech-art">HELLO!</span></div><div><h3>International education projects</h3><p>Take part in supervised online cultural exchanges, language practice, or learning-material projects with partner schools in other countries.</p><div class="global-impact"><b>Global impact</b><span>Students exchange perspectives and gain access to wider learning networks.</span></div><a class="org-link " href="https://www.unv.org/become-online-volunteer" target="_blank" rel="noopener noreferrer"><span class="org-tag">INTERNATIONAL · DEVELOPMENT</span><b>UN Volunteers (UNV)</b><small>The UN programme that supports volunteering for peace and development, including online volunteering from home.</small><span class="org-go">Visit organisation <i>↗</i></span></a></div></article>
+      </div>
+      <div class="global-footnote"><span class="global-footnote-icon">✳</span><p>International projects should be organised with reputable partners. Disaster response, wildlife care, and field conservation require appropriate training, permissions, and adult or professional supervision.</p></div>
+    </section>
+
+    <section class="how-section">
+      <div class="section-shell how-grid">
+        <div><div class="section-kicker">YOUR FIRST STEP</div><h2>Make your good<br><em>intention practical.</em></h2><p class="how-intro">A thoughtful volunteer is prepared, respectful, and ready to learn.</p></div>
+        <div class="steps-list">
+          <div class="step"><span>01</span><div><h3>Choose a cause</h3><p>Think about the community or issue you care about.</p></div></div>
+          <div class="step"><span>02</span><div><h3>Find a trusted organiser</h3><p>Check the organisation, activity details, and how donations or support are used.</p></div></div>
+          <div class="step"><span>03</span><div><h3>Ask, prepare, and participate</h3><p>Follow instructions, respect the people you support, and work within your skills.</p></div></div>
+          <div class="step"><span>04</span><div><h3>Reflect and keep contributing</h3><p>Learn from the experience and look for safe ways to stay involved.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section section-shell" id="about">
+      <div class="section-heading">
+        <div><div class="section-kicker">05 — THE PEOPLE BEHIND THE PROJECT</div><h2>Meet our<br><em>little team.</em></h2></div>
+        <div class="section-heading-side"><p>We are a team of three students who believe that learning about volunteering is also a way to inspire action. Get to know the people behind this website.</p><span class="section-count">3 STUDENTS · 1 SHARED GOAL</span></div>
+      </div>
+
+      <div class="team-grid">
+        <!-- MEMBER 1: Edit the name, introduction, role, and image path below. -->
+        <article class="team-card" data-member="1">
+          <div class="portrait-frame portrait-one">
+            <div class="portrait-placeholder"><span>01</span><b>YOUR<br>PHOTO</b><small>Researcher</small></div>
+            <img class="member-preview" data-member-photo alt="Photograph of member one" src="img/darrel.jpeg" hidden>
+          </div>
+          <h3 class="member-name">Member One — Darrel Reizo</h3>
+          <p class="member-bio">Hello! I enjoy learning about social issues and finding useful information. I contributed by researching volunteering and writing the website content.</p>
+          <div class="member-role"><span>PROJECT RESPONSIBILITY</span><b>Researcher &amp; Content Writer</b><p>Research facts, collect examples, and write website content.</p></div>
+        </article>
+
+        <!-- MEMBER 2: Edit the name, introduction, role, and image path below. -->
+        <article class="team-card" data-member="2">
+          <div class="portrait-frame portrait-two">
+            <div class="portrait-placeholder"><span>02</span><b>YOUR<br>PHOTO</b><small>Designer</small></div>
+            <img class="member-preview" data-member-photo alt="Photograph of member two" src="img/dwayne.jpeg" hidden>
+          </div>
+          <h3 class="member-name">Member Two — Dwayne Lionel Dymeztky</h3>
+          <p class="member-bio">Hi! I like creative design and turning ideas into clear visuals. I contributed by designing the website layout, choosing its colours, and arranging the visual elements.</p>
+          <div class="member-role"><span>PROJECT RESPONSIBILITY</span><b>Website Designer</b><p>Design the layout, choose colours, and arrange visual elements.</p></div>
+        </article>
+
+        <!-- MEMBER 3: Edit the name, introduction, role, and image path below. -->
+        <article class="team-card" data-member="3">
+          <div class="portrait-frame portrait-three">
+            <div class="portrait-placeholder"><span>03</span><b>YOUR<br>PHOTO</b><small>Editor</small></div>
+            <img class="member-preview" data-member-photo alt="Photograph of member three" src="img/kean.jpeg" hidden>
+          </div>
+          <h3 class="member-name">Member Three — Kean Shen</h3>
+          <p class="member-bio">Hello! I enjoy checking details and making sure information is easy to understand. I contributed by editing the English, organising the sections, and checking the website features.</p>
+          <div class="member-role"><span>PROJECT RESPONSIBILITY</span><b>Editor &amp; Website Coordinator</b><p>Check language, organise pages, and test website features.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="closing-section" id="closing">
+      <div class="closing-orbit orbit-left">♡</div><div class="closing-orbit orbit-right">✳</div>
+      <div class="section-shell closing-inner">
+        <div class="section-kicker">06 — EVERY ACTION COUNTS</div>
+        <h2>Be the reason<br><em>someone smiles.</em></h2>
+        <p>You do not have to change the whole world in one day. Start with one thoughtful action, invite others to join, and keep showing up.</p>
+        <a class="button button-lime" href="#home">Start with one action <span>↑</span></a>
+        <div class="closing-mantra"><span>THINK GLOBALLY</span><i>✳</i><span>ACT LOCALLY</span><i>✳</i><span>MAKE EVERY ACTION COUNT</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-top"><a class="brand footer-brand" href="#home"><span class="brand-mark">V<span>+</span></span><span class="brand-name">volunteer<span>today.</span></span></a><p>Small Actions. Big Impact. A Better World.</p><a class="back-top" href="#top">BACK TO TOP ↑</a></div>
+    <div class="footer-bottom"><span>© <span id="year"></span> Volunteer Today, Change Tomorrow.</span><span>Made with care by our student team.</span></div>
+    <div class="sources" id="sources">
+      <details><summary>Information sources & further reading</summary>
+        <div class="source-links">
+          <a href="https://knowledge.unv.org/index.php/glossary" target="_blank" rel="noopener">UN Volunteers — Volunteerism glossary</a>
+          <a href="https://www.un.org/en/observances/volunteer-day" target="_blank" rel="noopener">United Nations — International Volunteer Day</a>
+          <a href="https://www.ifrc.org/get-involved/volunteer-us" target="_blank" rel="noopener">IFRC — Volunteer with us</a>
+          <a href="https://foodcycle.id/volunteering/" target="_blank" rel="noopener">FoodCycle Indonesia — Volunteering</a>
+          <a href="https://sejiwa.org/en/shift/" target="_blank" rel="noopener">SEJIWA — SHIFT youth campaign</a>
+          <a href="https://www.rinjanilombok.org/get-involved/volunteer" target="_blank" rel="noopener">Rinjani-Lombok MIDAS — Volunteer with us</a>
+          <a href="https://wwf.id/en/id/volunteer" target="_blank" rel="noopener">WWF-Indonesia — Volunteer types</a>
+          <a href="https://pmi.or.id" target="_blank" rel="noopener">Indonesian Red Cross (PMI)</a>
+          <a href="https://indonesiamengajar.org" target="_blank" rel="noopener">Indonesia Mengajar</a>
+          <a href="https://www.unv.org/become-online-volunteer" target="_blank" rel="noopener">UN Volunteers — Online volunteering</a>
+          <a href="https://www.unicef.org/indonesia/frequently-asked-questions" target="_blank" rel="noopener">UNICEF Indonesia — Frequently asked questions</a>
+        </div>
+      </details>
+    </div>
+  </footer>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo preview" hidden>
+    <div class="lb-bar">
+      <span class="lb-caption" id="lbCaption"></span>
+      <a class="lb-source" id="lbSource" target="_blank" rel="noopener noreferrer" hidden>View source ↗</a>
+      <span class="lb-tools">
+        <button type="button" id="lbOut" aria-label="Zoom out">−</button>
+        <button type="button" id="lbReset" aria-label="Reset zoom">100%</button>
+        <button type="button" id="lbIn" aria-label="Zoom in">+</button>
+        <button type="button" id="lbClose" aria-label="Close preview">✕</button>
+      </span>
+    </div>
+    <div class="lb-stage" id="lbStage"><img id="lbImg" alt=""></div>
+    <p class="lb-hint">Scroll or pinch to zoom · drag to move · Esc to close</p>
+  </div>
+  <script>
+(() => {
+  const menuToggle = document.getElementById('menuToggle');
+  const mainNav = document.getElementById('mainNav');
+  const navLinks = [...document.querySelectorAll('.nav-link')];
+
+  menuToggle.addEventListener('click', () => {
+    const isOpen = mainNav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+    menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
+  });
+
+  navLinks.concat([...mainNav.querySelectorAll('.nav-cta')]).forEach(link => {
+    link.addEventListener('click', () => {
+      mainNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  const sectionObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const matchingLink = navLinks.find(link => link.getAttribute('href') === `#${entry.target.id}`);
+      if (matchingLink) {
+        navLinks.forEach(link => link.classList.remove('active'));
+        matchingLink.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-35% 0px -55% 0px' });
+
+  ['home', 'organised', 'local', 'international', 'about'].forEach(id => {
+    const section = document.getElementById(id);
+    if (section) sectionObserver.observe(section);
+  });
+
+  // Load member photos from the image paths written in this HTML file.
+  document.querySelectorAll('img[data-member-photo]').forEach(img => {
+    const placeholder = img.parentElement.querySelector('.portrait-placeholder');
+    img.addEventListener('load', () => {
+      img.hidden = false;
+      if (placeholder) placeholder.hidden = true;
+    });
+    img.addEventListener('error', () => {
+      img.hidden = true;
+      if (placeholder) placeholder.hidden = false;
+    });
+    if (img.complete && img.naturalWidth > 0) {
+      img.hidden = false;
+      if (placeholder) placeholder.hidden = true;
+    }
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Photo lightbox: click a photo to preview; zoom with buttons, wheel, pinch or keys; drag to pan.
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  const lbStage = document.getElementById('lbStage');
+  const lbSource = document.getElementById('lbSource');
+  const lbCaption = document.getElementById('lbCaption');
+  const lbReset = document.getElementById('lbReset');
+  let scale = 1, tx = 0, ty = 0, lastFocus = null;
+  const MIN = 1, MAX = 6;
+  const apply = () => {
+    lbImg.style.transform = `translate(${tx}px, ${ty}px) scale(${scale})`;
+    lbReset.textContent = Math.round(scale * 100) + '%';
+  };
+  const setScale = (s) => {
+    scale = Math.min(MAX, Math.max(MIN, s));
+    if (scale === 1) { tx = 0; ty = 0; }
+    apply();
+  };
+  const openLb = (img) => {
+    lastFocus = document.activeElement;
+    const credit = img.parentElement.querySelector('a.photo-credit');
+    lbImg.src = img.currentSrc || img.src;
+    lbImg.alt = img.alt;
+    lbCaption.textContent = img.alt;
+    let srcUrl = null, srcText = 'View source ↗';
+    if (credit) { srcUrl = credit.href; }
+    else {
+      const near = img.closest('.hero-visual, .local-image');
+      const a = near && near.querySelector('.hero-caption a, .image-caption a');
+      if (a) srcUrl = a.href;
+    }
+    if (srcUrl) { lbSource.href = srcUrl; lbSource.hidden = false; lbSource.textContent = srcText; }
+    else lbSource.hidden = true;
+    scale = 1; tx = 0; ty = 0; apply();
+    lb.hidden = false;
+    document.body.classList.add('lb-open');
+    document.getElementById('lbClose').focus();
+  };
+  const closeLb = () => {
+    lb.hidden = true;
+    lbImg.removeAttribute('src');
+    document.body.classList.remove('lb-open');
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  };
+  document.querySelectorAll('img.zoomable').forEach(img => {
+    img.tabIndex = 0;
+    img.setAttribute('role', 'button');
+    img.addEventListener('click', () => openLb(img));
+    img.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLb(img); } });
+  });
+  document.getElementById('lbClose').addEventListener('click', closeLb);
+  document.getElementById('lbIn').addEventListener('click', () => setScale(scale * 1.4));
+  document.getElementById('lbOut').addEventListener('click', () => setScale(scale / 1.4));
+  lbReset.addEventListener('click', () => setScale(1));
+  lbStage.addEventListener('click', e => { if (e.target === lbStage && !moved) closeLb(); });
+  lbStage.addEventListener('wheel', e => { e.preventDefault(); setScale(scale * (e.deltaY < 0 ? 1.15 : 1 / 1.15)); }, { passive: false });
+  lbImg.addEventListener('dblclick', () => setScale(scale > 1 ? 1 : 2.5));
+  document.addEventListener('keydown', e => {
+    if (lb.hidden) return;
+    if (e.key === 'Escape') closeLb();
+    else if (e.key === '+' || e.key === '=') setScale(scale * 1.4);
+    else if (e.key === '-') setScale(scale / 1.4);
+    else if (e.key === '0') setScale(1);
+  });
+  // Drag to pan and pinch to zoom (pointer events).
+  const pts = new Map(); let startDist = 0, startScale = 1, moved = false;
+  lbStage.addEventListener('pointerdown', e => {
+    lbStage.setPointerCapture(e.pointerId);
+    pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    moved = false;
+    if (pts.size === 2) {
+      const [a, b] = [...pts.values()];
+      startDist = Math.hypot(a.x - b.x, a.y - b.y); startScale = scale;
+    }
+    lbStage.classList.add('dragging');
+  });
+  lbStage.addEventListener('pointermove', e => {
+    if (!pts.has(e.pointerId)) return;
+    const prev = pts.get(e.pointerId);
+    pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    if (pts.size === 2) {
+      const [a, b] = [...pts.values()];
+      setScale(startScale * Math.hypot(a.x - b.x, a.y - b.y) / startDist);
+      moved = true;
+    } else if (scale > 1) {
+      tx += e.clientX - prev.x; ty += e.clientY - prev.y; moved = true; apply();
+    }
+  });
+  const endPtr = e => { pts.delete(e.pointerId); if (!pts.size) lbStage.classList.remove('dragging'); setTimeout(() => { moved = false; }, 0); };
+  lbStage.addEventListener('pointerup', endPtr);
+  lbStage.addEventListener('pointercancel', endPtr);
+})();
+
+  </script>
+</body>
+</html>
