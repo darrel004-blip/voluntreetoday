@@ -385,7 +385,7 @@ body.lb-open{overflow:hidden}
         <div class="section-heading-side"><p>Your dashboard brings your profile, chosen causes, and activity registrations together in one place.</p><span class="section-count">PERSONAL ACTIVITY OVERVIEW</span></div>
       </div>
       <div id="dashboardContent" class="dashboard-content">
-        <div class="dashboard-logged-out"><span class="dashboard-icon">♧</span><div><h3>Your volunteering journey starts here.</h3><p>Sign in or create a demo account to save your interests and see the activities you register for on this browser.</p></div><button class="button button-dark" id="dashboardLoginBtn" type="button">Login / Register <span>↗</span></button></div>
+        <div class="dashboard-logged-out"><span class="dashboard-icon">♧</span><div><h3>Your volunteering journey starts here.</h3><p>Sign in or create an account to save your profile and interests. Activity registrations in this prototype are currently saved only in this browser.</p></div><button class="button button-dark" id="dashboardLoginBtn" type="button">Login / Register <span>↗</span></button></div>
       </div>
     </section>
 
@@ -466,7 +466,7 @@ body.lb-open{overflow:hidden}
     <form id="loginForm" class="app-form">
       <label>Email address<input name="email" type="email" autocomplete="username" required placeholder="you@example.com"></label>
       <label>Password<input name="password" type="password" autocomplete="current-password" required minlength="8" placeholder="At least 8 characters"></label>
-      <div class="form-inline"><label class="check-label"><input type="checkbox" name="remember"> Remember me on this browser</label><button class="text-button" id="forgotPasswordBtn" type="button">Forgot password?</button></div>
+      <div class="form-inline"><span class="optional-label">Your Supabase session is saved on this browser.</span><button class="text-button" id="forgotPasswordBtn" type="button">Forgot password?</button></div>
       <p class="form-message" id="loginMessage" role="status"></p>
       <button class="button button-dark form-submit" type="submit">Login <span>↗</span></button>
       <p class="form-footnote">New here? <button class="text-button" type="button" data-auth-mode="register">Create an account</button></p>
@@ -481,10 +481,19 @@ body.lb-open{overflow:hidden}
         <label><input type="checkbox" name="interests" value="environment"> Environment</label><label><input type="checkbox" name="interests" value="education"> Education</label><label><input type="checkbox" name="interests" value="animal"> Animal welfare</label><label><input type="checkbox" name="interests" value="community"> Community development</label><label><input type="checkbox" name="interests" value="health"> Health and social welfare</label><label><input type="checkbox" name="interests" value="disaster"> Disaster relief</label><label><input type="checkbox" name="interests" value="arts"> Arts and culture</label>
       </div></fieldset>
       <p class="form-message" id="registerMessage" role="status"></p>
-      <button class="button button-dark form-submit" type="submit">Create demo account <span>↗</span></button>
+      <button class="button button-dark form-submit" type="submit">Create account <span>↗</span></button>
       <p class="form-footnote">Already registered? <button class="text-button" type="button" data-auth-mode="login">Login</button></p>
     </form>
-    <p class="prototype-warning"><b>Prototype privacy notice:</b> This standalone demo stores profile, registration, and a password verifier in this browser only. Use test details and a unique test password—not your real password or sensitive personal information. It is not secure production authentication.</p>
+    <p class="prototype-warning"><b>Account notice:</b> Login and account profiles use Supabase Auth when the project credentials are configured. Activity registrations are still stored only in this browser prototype; connect the registrations database before using this as a live volunteering platform.</p>
+  </dialog>
+
+  <dialog class="app-dialog" id="passwordResetDialog" aria-labelledby="passwordResetTitle">
+    <div class="dialog-top"><div><span class="section-kicker">ACCOUNT SECURITY</span><h2 id="passwordResetTitle">Choose a new password.</h2></div><button class="dialog-close" type="button" data-close-dialog aria-label="Close">×</button></div>
+    <form id="passwordResetForm" class="app-form">
+      <label>New password<input name="password" type="password" autocomplete="new-password" required minlength="8" placeholder="At least 8 characters"></label>
+      <p class="form-message" id="passwordResetMessage" role="status"></p>
+      <button class="button button-dark form-submit" type="submit">Update password <span>↗</span></button>
+    </form>
   </dialog>
 
   <dialog class="app-dialog detail-dialog" id="detailDialog" aria-labelledby="detailTitle">
@@ -506,7 +515,7 @@ body.lb-open{overflow:hidden}
       <p class="form-message" id="registrationMessage" role="status"></p>
       <button class="button button-dark form-submit" type="submit">Confirm registration <span>↗</span></button>
     </form>
-    <p class="prototype-warning">Use sample contact details only. A real deployment should collect contact information through a secure backend and explain how it is used.</p>
+    <p class="prototype-warning">This prototype still stores activity registrations in this browser. Do not enter sensitive personal information until registration storage and privacy controls have been connected to the database.</p>
   </dialog>
 
   <dialog class="app-dialog interests-dialog" id="interestsDialog" aria-labelledby="interestsTitle">
@@ -711,14 +720,32 @@ body.lb-open{overflow:hidden}
 
   </script>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 (() => {
   'use strict';
 
-  const STORE_USERS = 'voluntree_demo_users_v1';
+  // SUPABASE SETUP: replace these two placeholders with values from
+  // Supabase Dashboard -> Project Settings -> API Keys.
+  // Only use the Project URL and the sb_publishable_... key here.
+  // NEVER put an sb_secret_... key in browser code.
+  const SUPABASE_URL = 'https://negatjdcpkfwlbnflfda.supabase.co';
+  const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_w2YrcjUuPCf8ruMvrUfD2g_W2UwLY6v';
+  const supabaseConfigured =
+    /^https:\/\/[a-z0-9-]+\.supabase\.co$/i.test(SUPABASE_URL) &&
+    SUPABASE_PUBLISHABLE_KEY.startsWith('sb_publishable_') &&
+    !SUPABASE_PUBLISHABLE_KEY.includes('PASTE_');
+  const supabaseClient = (supabaseConfigured && window.supabase)
+    ? window.supabase.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {
+        auth: {
+          autoRefreshToken: true,
+          persistSession: true,
+          detectSessionInUrl: true
+        }
+      })
+    : null;
+
   const STORE_REGS = 'voluntree_demo_registrations_v1';
-  const STORE_SESSION = 'voluntree_demo_session_v1';
-  const STORE_REMEMBER = 'voluntree_demo_remember_v1';
   const categories = {
     environment: 'Environmental conservation', education: 'Education',
     animal: 'Animal welfare', community: 'Community development',
@@ -796,6 +823,7 @@ body.lb-open{overflow:hidden}
   const $ = (sel, root=document) => root.querySelector(sel);
   const $$ = (sel, root=document) => [...root.querySelectorAll(sel)];
   const authDialog = $('#authDialog');
+  const passwordResetDialog = $('#passwordResetDialog');
   const detailDialog = $('#detailDialog');
   const registrationDialog = $('#registrationDialog');
   const interestsDialog = $('#interestsDialog');
@@ -808,8 +836,23 @@ body.lb-open{overflow:hidden}
     catch { return fallback; }
   }
   function writeStore(key, value) { localStorage.setItem(key, JSON.stringify(value)); }
-  function users() { return readStore(STORE_USERS, []); }
   function registrations() { return readStore(STORE_REGS, []); }
+  function requireSupabase(messageId) {
+    if (supabaseClient) return true;
+    setMessage(messageId, 'Supabase is not connected yet. Add your Project URL and Publishable Key near the top of this script, then reload the page.');
+    return false;
+  }
+  function mapAuthUser(user) {
+    const metadata = user?.user_metadata || {};
+    return {
+      id: user.id,
+      name: metadata.full_name || 'Volunteer',
+      email: user.email || '',
+      location: metadata.location || '',
+      bio: metadata.bio || '',
+      interests: Array.isArray(metadata.interests) ? metadata.interests : []
+    };
+  }
   function setMessage(id, message, success=false) {
     const el = document.getElementById(id);
     if (!el) return;
@@ -877,35 +920,15 @@ body.lb-open{overflow:hidden}
     setAuthMode(mode);
     if (!authDialog.open) authDialog.showModal();
   }
-  function saveUser(user, remember) {
-    currentUser = user;
-    const session = {email:user.email};
-    sessionStorage.setItem(STORE_SESSION,JSON.stringify(session));
-    if (remember) localStorage.setItem(STORE_REMEMBER,JSON.stringify(session));
-    else localStorage.removeItem(STORE_REMEMBER);
-    updateUI();
-  }
-  function restoreSession() {
-    const session = readStore(STORE_REMEMBER,null) || readStore(STORE_SESSION,null);
-    if (session?.email) currentUser = users().find(u => u.email === session.email) || null;
-  }
-  function logout() {
+  async function logout() {
+    if (!requireSupabase('loginMessage')) return;
+    const { error } = await supabaseClient.auth.signOut();
+    if (error) {
+      alert(error.message);
+      return;
+    }
     currentUser = null;
-    sessionStorage.removeItem(STORE_SESSION);
-    localStorage.removeItem(STORE_REMEMBER);
     updateUI();
-  }
-  async function passwordVerifier(password, saltHex) {
-    if (!window.crypto?.subtle) throw new Error('Secure browser crypto is unavailable. Open this demo through HTTPS (for example, GitHub Pages) or localhost.');
-    const enc = new TextEncoder();
-    const key = await crypto.subtle.importKey('raw',enc.encode(password),'PBKDF2',false,['deriveBits']);
-    const bits = await crypto.subtle.deriveBits({name:'PBKDF2',salt:Uint8Array.from(saltHex.match(/.{1,2}/g).map(h=>parseInt(h,16))),iterations:120000,hash:'SHA-256'},key,256);
-    return [...new Uint8Array(bits)].map(b=>b.toString(16).padStart(2,'0')).join('');
-  }
-  function randomSalt() {
-    const bytes = new Uint8Array(16);
-    crypto.getRandomValues(bytes);
-    return [...bytes].map(b=>b.toString(16).padStart(2,'0')).join('');
   }
   function updateUI() {
     const authBtn = $('#authOpenBtn'), userBtn = $('#navUserBtn');
@@ -995,9 +1018,50 @@ body.lb-open{overflow:hidden}
     }
   });
   $$('[data-close-dialog]').forEach(btn=>btn.addEventListener('click',()=>btn.closest('dialog').close()));
-  [authDialog,detailDialog,registrationDialog,interestsDialog].forEach(d=>d.addEventListener('click',e=>{if(e.target===d)d.close();}));
+  [authDialog,passwordResetDialog,detailDialog,registrationDialog,interestsDialog].forEach(d=>d.addEventListener('click',e=>{if(e.target===d)d.close();}));
   $$('[data-auth-mode]').forEach(btn=>btn.addEventListener('click',()=>setAuthMode(btn.dataset.authMode)));
-  $('#forgotPasswordBtn').addEventListener('click',()=>setMessage('loginMessage','Password reset email is not available in this offline demo. A real version needs a verified email service and secure auth provider.'));
+  $('#forgotPasswordBtn').addEventListener('click', async () => {
+    if (!requireSupabase('loginMessage')) return;
+    const email = normaliseEmail($('#loginForm').elements.email.value);
+    if (!email) {
+      setMessage('loginMessage', 'Enter your email address first, then select Forgot password.');
+      $('#loginForm').elements.email.focus();
+      return;
+    }
+    const redirectTo = window.location.origin + window.location.pathname;
+    try {
+      const { error } = await supabaseClient.auth.resetPasswordForEmail(email, { redirectTo });
+      if (error) throw error;
+      setMessage('loginMessage', 'If an account exists for this email, Supabase has sent a password-reset link. Open the link on this website to choose a new password.', true);
+    } catch (error) {
+      setMessage('loginMessage', error.message || 'Could not request a password reset.');
+    }
+  });
+
+  $('#passwordResetForm').addEventListener('submit', async e => {
+    e.preventDefault();
+    if (!requireSupabase('passwordResetMessage')) return;
+    const password = e.currentTarget.elements.password.value;
+    if (password.length < 8) {
+      setMessage('passwordResetMessage', 'Use at least 8 characters.');
+      return;
+    }
+    const submit = e.currentTarget.querySelector('[type=submit]');
+    submit.disabled = true;
+    try {
+      const { data, error } = await supabaseClient.auth.updateUser({ password });
+      if (error) throw error;
+      currentUser = data.user ? mapAuthUser(data.user) : currentUser;
+      e.currentTarget.reset();
+      passwordResetDialog.close();
+      updateUI();
+      alert('Your password has been updated.');
+    } catch (error) {
+      setMessage('passwordResetMessage', error.message || 'Could not update the password.');
+    } finally {
+      submit.disabled = false;
+    }
+  });
   $('#eventGrid').addEventListener('click',eventGridAction);
   $('#recommendedGrid').addEventListener('click',eventGridAction);
   function eventGridAction(e) {
@@ -1018,61 +1082,99 @@ body.lb-open{overflow:hidden}
     interestsDialog.showModal();
   }
 
-  // Account creation: browser-only prototype. Never use real credentials here.
-  $('#registerForm').addEventListener('submit',async e=>{
+  // Create accounts through Supabase Auth (no passwords are stored by this website).
+  $('#registerForm').addEventListener('submit', async e => {
     e.preventDefault();
-    const form=e.currentTarget;
-    const name=form.elements.name.value.trim();
-    const email=normaliseEmail(form.elements.email.value);
-    const password=form.elements.password.value;
-    const location=form.elements.location.value.trim();
-    const bio=form.elements.bio.value.trim();
-    const interests=$$('input[name="interests"]:checked',form).map(i=>i.value);
-    if (name.length<2 || !email || password.length<8 || location.length<2) {
-      setMessage('registerMessage','Please complete each required field. Your password must contain at least 8 characters.'); return;
+    if (!requireSupabase('registerMessage')) return;
+
+    const form = e.currentTarget;
+    const name = form.elements.name.value.trim();
+    const email = normaliseEmail(form.elements.email.value);
+    const password = form.elements.password.value;
+    const location = form.elements.location.value.trim();
+    const bio = form.elements.bio.value.trim();
+    const interests = $$('input[name="interests"]:checked', form).map(i => i.value);
+
+    if (name.length < 2 || !email || password.length < 8 || location.length < 2) {
+      setMessage('registerMessage', 'Please complete each required field. Your password must contain at least 8 characters.');
+      return;
     }
-    if (users().some(u=>u.email===email)) { setMessage('registerMessage','An account with this email already exists. Please log in instead.'); return; }
-    const submit=form.querySelector('[type=submit]');
-    submit.disabled=true; submit.textContent='Creating account…';
+
+    const submit = form.querySelector('[type=submit]');
+    submit.disabled = true;
+    submit.textContent = 'Creating account…';
     try {
-      const salt=randomSalt();
-      const hash=await passwordVerifier(password,salt);
-      const user={name,email,location,bio,interests,salt,passwordHash:hash,createdAt:new Date().toISOString()};
-      writeStore(STORE_USERS,[...users(),user]);
-      saveUser(user,false);
-      authDialog.close();
+      const redirectTo = window.location.origin + window.location.pathname;
+      const { data, error } = await supabaseClient.auth.signUp({
+        email,
+        password,
+        options: {
+          emailRedirectTo: redirectTo,
+          data: {
+            full_name: name,
+            location,
+            bio,
+            interests
+          }
+        }
+      });
+      if (error) throw error;
+
       form.reset();
-      updateUI();
-      if (pendingActivityId) { const id=pendingActivityId; pendingActivityId=null; startRegistration(id); }
-      else document.getElementById('dashboard').scrollIntoView({behavior:'smooth'});
-    } catch(err) {
-      setMessage('registerMessage',err.message || 'Could not create the demo account.');
+      if (data.session && data.user) {
+        currentUser = mapAuthUser(data.user);
+        authDialog.close();
+        updateUI();
+        if (pendingActivityId) {
+          const activityId = pendingActivityId;
+          pendingActivityId = null;
+          startRegistration(activityId);
+        } else {
+          document.getElementById('dashboard').scrollIntoView({ behavior: 'smooth' });
+        }
+      } else {
+        setMessage('registerMessage', 'Account created. Check your email and confirm your address before logging in.', true);
+      }
+    } catch (error) {
+      setMessage('registerMessage', error.message || 'Could not create your account.');
     } finally {
-      submit.disabled=false; submit.textContent='Create demo account ↗';
+      submit.disabled = false;
+      submit.textContent = 'Create account ↗';
     }
   });
 
-  $('#loginForm').addEventListener('submit',async e=>{
+  // Sign in against Supabase Auth.
+  $('#loginForm').addEventListener('submit', async e => {
     e.preventDefault();
-    const form=e.currentTarget;
-    const email=normaliseEmail(form.elements.email.value);
-    const password=form.elements.password.value;
-    const user=users().find(u=>u.email===email);
-    if (!user) { setMessage('loginMessage','No demo account was found for that email. Create an account first.'); return; }
-    const submit=form.querySelector('[type=submit]');
-    submit.disabled=true; submit.textContent='Signing in…';
+    if (!requireSupabase('loginMessage')) return;
+
+    const form = e.currentTarget;
+    const email = normaliseEmail(form.elements.email.value);
+    const password = form.elements.password.value;
+    const submit = form.querySelector('[type=submit]');
+    submit.disabled = true;
+    submit.textContent = 'Signing in…';
     try {
-      const hash=await passwordVerifier(password,user.salt);
-      if (hash!==user.passwordHash) { setMessage('loginMessage','The password does not match this demo account.'); return; }
-      const pending= pendingActivityId;
-      saveUser(user,form.elements.remember.checked);
+      const { data, error } = await supabaseClient.auth.signInWithPassword({ email, password });
+      if (error) throw error;
+
+      const pending = pendingActivityId;
+      currentUser = mapAuthUser(data.user);
+      form.reset();
       authDialog.close();
-      if (pending) { pendingActivityId=null; startRegistration(pending); }
-      else document.getElementById('dashboard').scrollIntoView({behavior:'smooth'});
-    } catch(err) {
-      setMessage('loginMessage',err.message || 'Could not sign in.');
+      updateUI();
+
+      if (pending) {
+        pendingActivityId = null;
+        startRegistration(pending);
+      } else {
+        document.getElementById('dashboard').scrollIntoView({ behavior: 'smooth' });
+      }
+    } catch (error) {
+      setMessage('loginMessage', error.message || 'Could not sign in. Check your email and password.');
     } finally {
-      submit.disabled=false; submit.textContent='Login ↗';
+      submit.disabled = false;
+      submit.textContent = 'Login ↗';
     }
   });
 
@@ -1103,14 +1205,26 @@ body.lb-open{overflow:hidden}
     alert('Registration saved in this browser demo. Remember to confirm real event details with the organiser.');
   });
 
-  $('#interestsForm').addEventListener('submit',e=>{
+  $('#interestsForm').addEventListener('submit', async e => {
     e.preventDefault();
-    if (!currentUser) return;
-    currentUser.interests=$$('input[name="interests"]:checked',e.currentTarget).map(i=>i.value);
-    const all=users().map(u=>u.email===currentUser.email?currentUser:u);
-    writeStore(STORE_USERS,all);
-    interestsDialog.close();
-    updateUI();
+    if (!currentUser || !requireSupabase('interestsMessage')) return;
+    const interests = $$('input[name="interests"]:checked', e.currentTarget).map(i => i.value);
+    try {
+      const { data, error } = await supabaseClient.auth.updateUser({
+        data: {
+          full_name: currentUser.name,
+          location: currentUser.location,
+          bio: currentUser.bio,
+          interests
+        }
+      });
+      if (error) throw error;
+      currentUser = mapAuthUser(data.user);
+      interestsDialog.close();
+      updateUI();
+    } catch (error) {
+      setMessage('interestsMessage', error.message || 'Could not save your interests.');
+    }
   });
 
   // Keep the menu's active marker aligned with the new sections.
@@ -1130,8 +1244,28 @@ body.lb-open{overflow:hidden}
     $('#menuToggle').setAttribute('aria-expanded','false');
   }));
 
-  restoreSession();
-  updateUI();
+  // Restore the Supabase session and keep the navigation/dashboard in sync.
+  if (supabaseClient) {
+    supabaseClient.auth.onAuthStateChange((event, session) => {
+      currentUser = session?.user ? mapAuthUser(session.user) : null;
+      updateUI();
+      if (event === 'PASSWORD_RECOVERY') {
+        setMessage('passwordResetMessage', 'Enter a new password for your account.');
+        if (!passwordResetDialog.open) passwordResetDialog.showModal();
+      }
+    });
+    supabaseClient.auth.getSession().then(({ data, error }) => {
+      if (error) {
+        console.error('Supabase session restore failed:', error);
+        return;
+      }
+      currentUser = data.session?.user ? mapAuthUser(data.session.user) : null;
+      updateUI();
+    });
+  } else {
+    console.warn('Voluntree: Supabase is not configured. Add the Project URL and Publishable Key in the SUPABASE_SETUP section.');
+    updateUI();
+  }
 })();
 </script>
 
