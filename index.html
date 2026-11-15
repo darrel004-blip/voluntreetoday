@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#173f35" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%23d7f36b'/%3E%3Cpath d='M20 5 8 19h7L8 27h9v8h6v-8h9l-7-8h7L20 5Z' fill='%23173f35'/%3E%3C/svg%3E" />
   <meta name="description" content="Volunteer Today, Change Tomorrow — discover organised, local, and international ways to make a positive difference." />
   <title>Volunteer Today, Change Tomorrow</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -70,13 +71,151 @@ body.lb-open{overflow:hidden}
 /* Static team biodata: edit the content in standalone.html, not in the browser. */
 .team-card > h3.member-name{display:block;width:auto;margin:14px 0 7px;padding:0;border:0;border-radius:0;background:transparent;color:var(--forest);font-family:Manrope,sans-serif;font-size:15px;font-weight:700;line-height:1.35}
 .team-card > p.member-bio{width:auto;min-height:0;margin:0;padding:0;border:0;border-radius:0;background:transparent;color:#738078;font-size:10px;line-height:1.75;resize:none;overflow-wrap:anywhere}
+
+/* --- Volunteer platform additions --- */
+.brand-mark{display:grid;place-items:center}
+.brand-mark svg{width:27px;height:27px;color:var(--forest)}
+.nav-cta{border:0;cursor:pointer;font-family:inherit}
+.nav-user{border:1px solid #d6e1d4;background:#edf3e9;color:var(--forest);padding:11px 14px;border-radius:5px;font-size:11px;font-weight:700;cursor:pointer}
+.hero-nav-cta{margin-top:0}
+.explore-section{padding-top:96px;padding-bottom:106px}
+.demo-notice{display:flex;gap:13px;align-items:flex-start;padding:15px 18px;background:#eef3e9;border:1px solid #dce7d8;border-left:3px solid #88a488;margin:0 0 28px;color:#5f7062}
+.demo-notice>span{font-size:18px;color:var(--forest)}
+.demo-notice p{margin:0;font-size:10px;line-height:1.75}
+.demo-notice b{color:var(--forest)}
+.interest-strip{display:flex;align-items:center;justify-content:space-between;gap:25px;padding:24px 26px;background:#e7eee3;margin-bottom:34px}
+.interest-strip h3,.subsection-heading h3{font-family:Manrope,sans-serif;font-size:22px;color:var(--forest);letter-spacing:-.05em;margin:8px 0 5px}
+.interest-strip p{font-size:11px;color:#6e7d71;margin:0;line-height:1.6}
+.interest-strip .button{white-space:nowrap}
+.subsection-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;margin:38px 0 18px}
+.subsection-heading h3{font-size:25px;margin:7px 0 0}
+.subtle-button,.text-button{border:0;background:none;color:var(--forest);font-size:10px;font-weight:700;text-decoration:underline;text-underline-offset:3px;cursor:pointer;padding:5px}
+.event-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.event-card{background:var(--paper);border:1px solid #e5e9e1;padding:22px;display:flex;flex-direction:column;min-height:330px;transition:transform .2s,box-shadow .2s}
+.event-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px #173f3510}
+.event-card-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.event-category{font-size:8px;letter-spacing:.14em;font-weight:800;color:#758b79}
+.event-status{display:inline-flex;padding:6px 9px;border-radius:99px;background:#edf4e9;color:#426a4a;font-size:8px;font-weight:800;letter-spacing:.06em}
+.event-status.full,.event-status.closed{background:#f5e9e4;color:#9b5948}
+.event-card h4{font-family:Manrope,sans-serif;font-size:20px;letter-spacing:-.05em;color:var(--forest);margin:18px 0 8px}
+.event-card>p{font-size:11px;line-height:1.75;color:#718076;margin:0 0 14px}
+.event-meta{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:4px 0 17px}
+.event-meta div{background:#f1f4ed;padding:10px 11px;min-width:0}
+.event-meta span{display:block;font-size:8px;text-transform:uppercase;letter-spacing:.11em;color:#869487;margin-bottom:5px}
+.event-meta b{display:block;font-size:10px;line-height:1.45;color:#365a47;overflow-wrap:anywhere}
+.event-card-bottom{display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid #e7ebe4;padding-top:13px;margin-top:auto}
+.event-card-bottom small{font-size:9px;color:#839086}
+.event-card-actions{display:flex;gap:8px;align-items:center}
+.event-card-actions button{border:1px solid #cbd8c9;background:transparent;color:var(--forest);padding:9px 11px;border-radius:3px;font-size:9px;font-weight:800;cursor:pointer}
+.event-card-actions button.primary{background:var(--forest);border-color:var(--forest);color:white}
+.event-card-actions button:disabled{opacity:.45;cursor:not-allowed}
+.empty-events{grid-column:1/-1;padding:28px;background:#f0f3ec;color:#6f7e72;font-size:11px;text-align:center}
+.filter-wrap{font-size:9px;letter-spacing:.08em;color:#77877b;font-weight:700;display:flex;align-items:center;gap:10px}
+.filter-wrap select{border:1px solid #d9e1d7;background:#fffefa;padding:10px 12px;font-size:10px;color:var(--forest);border-radius:3px}
+.testimonial-section{background:var(--forest);padding:90px 0 85px;color:#f5f6ed}
+.testimonial-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.testimonial-card{background:#214b3f;border:1px solid #426457;padding:23px;min-height:255px;display:flex;flex-direction:column}
+.testimonial-top{display:flex;justify-content:space-between;align-items:center}
+.sample-label{font-size:8px;letter-spacing:.13em;color:var(--lime);font-weight:800}
+.quote-symbol{font-family:Georgia,serif;color:var(--lime);font-size:42px;line-height:.7}
+.testimonial-card>p{font-family:Manrope,sans-serif;font-size:15px;line-height:1.55;letter-spacing:-.025em;color:#f1f4ea;margin:18px 0 25px}
+.testimonial-person{display:flex;align-items:center;gap:10px;margin-top:auto;border-top:1px solid #47685b;padding-top:14px}
+.testimonial-avatar{width:35px;height:35px;border-radius:50%;display:grid;place-items:center;color:#234737;font-family:Manrope,sans-serif;font-weight:800}
+.avatar-green{background:#d7f36b}.avatar-peach{background:#f0c5a3}.avatar-lilac{background:#d4c9e7}
+.testimonial-person b,.testimonial-person small{display:block}
+.testimonial-person b{font-size:10px;color:#f4f6ed}
+.testimonial-person small{font-size:9px;color:#b5c8b9;margin-top:4px}
+.testimonial-disclaimer{font-size:9px;line-height:1.6;color:#c0d0c3;margin:17px 0 0}
+.dashboard-section{padding-top:96px;padding-bottom:100px}
+.dashboard-content{background:var(--paper);border:1px solid #e5e9e1;padding:27px}
+.dashboard-logged-out{display:flex;align-items:center;gap:18px}
+.dashboard-icon{width:48px;height:48px;border-radius:50%;background:#e7eee3;display:grid;place-items:center;font-size:24px;color:var(--forest);flex-shrink:0}
+.dashboard-logged-out>div{flex:1}
+.dashboard-logged-out h3,.dashboard-profile h3{font-family:Manrope,sans-serif;font-size:19px;letter-spacing:-.04em;color:var(--forest);margin:0 0 6px}
+.dashboard-logged-out p{font-size:11px;line-height:1.7;color:#748078;margin:0}
+.dashboard-main{display:grid;grid-template-columns:.75fr 1.25fr;gap:25px}
+.dashboard-profile{background:#edf3e9;padding:22px}
+.dashboard-profile p{font-size:10px;line-height:1.7;color:#6c7c70;margin:7px 0}
+.profile-detail{padding-top:11px;margin-top:12px;border-top:1px solid #d8e2d5;font-size:10px;color:#55705d}
+.dashboard-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:17px}
+.dashboard-actions button{border:1px solid #c6d6c4;background:transparent;padding:9px 11px;color:var(--forest);font-size:9px;font-weight:800;cursor:pointer}
+.dashboard-bookings h3{font-family:Manrope,sans-serif;font-size:19px;color:var(--forest);margin:0 0 14px}
+.booking-row{display:grid;grid-template-columns:1fr auto;gap:12px;padding:14px 0;border-top:1px solid #e6ebe3}
+.booking-row b{display:block;font-size:11px;color:var(--forest)}
+.booking-row small{display:block;font-size:9px;line-height:1.6;color:#7b897e;margin-top:4px}
+.booking-status{font-size:8px;color:#47724f;font-weight:800;background:#edf4e9;border-radius:99px;padding:6px 8px;height:max-content}
+.booking-row button{border:0;background:none;color:#9a5c4d;font-size:9px;font-weight:700;text-decoration:underline;cursor:pointer;grid-column:1/-1;justify-self:start;padding:0}
+.dashboard-empty{font-size:11px;line-height:1.7;color:#79877d;background:#f3f5ef;padding:17px}
+.interest-summary{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px}
+.interest-chip{background:#dce9dc;color:#45694d;padding:6px 9px;border-radius:99px;font-size:8px;font-weight:700}
+.app-dialog{width:min(560px,calc(100% - 28px));max-height:min(88vh,850px);overflow:auto;border:1px solid #dce5d9;border-radius:13px;padding:27px;background:var(--paper);color:var(--ink);box-shadow:0 24px 80px #102f2860}
+.app-dialog::backdrop{background:#102f28b8;backdrop-filter:blur(3px)}
+.dialog-top{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:18px}
+.dialog-top h2{font-family:Manrope,sans-serif;font-size:29px;letter-spacing:-.06em;color:var(--forest);margin:8px 0 0}
+.dialog-close{width:34px;height:34px;border:1px solid #dbe4d9;background:transparent;border-radius:50%;color:var(--forest);font-size:22px;cursor:pointer;line-height:1}
+.auth-tabs{display:flex;border-bottom:1px solid #dfe7dc;margin-bottom:18px}
+.auth-tab{padding:11px 15px;border:0;border-bottom:2px solid transparent;background:transparent;color:#7c897f;font-size:11px;font-weight:700;cursor:pointer}
+.auth-tab.active{border-bottom-color:var(--forest);color:var(--forest)}
+.app-form{display:flex;flex-direction:column;gap:13px}
+.app-form[hidden]{display:none}
+.app-form>label{display:flex;flex-direction:column;gap:6px;color:#68776c;font-size:9px;letter-spacing:.06em;font-weight:800}
+.app-form input:not([type=checkbox]),.app-form textarea,.app-form select{width:100%;border:1px solid #dce4da;background:#fbfcf8;padding:12px;color:var(--forest);font-size:11px;border-radius:4px;outline:none;letter-spacing:normal;font-weight:400}
+.app-form input:focus,.app-form textarea:focus,.app-form select:focus{border-color:#88a58d;box-shadow:0 0 0 2px #e4eee1}
+.app-form textarea{resize:vertical;line-height:1.6}
+.form-inline{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.check-label{display:flex!important;flex-direction:row!important;align-items:center;gap:8px!important;font-size:9px!important;letter-spacing:0!important;font-weight:500!important;color:#718076!important}
+.check-label input,.interest-options input{accent-color:var(--forest)}
+.optional-label{font-size:7px;letter-spacing:.1em;color:#91a091;margin-left:5px}
+.interest-fieldset{border:1px solid #e1e8de;padding:12px;margin:0}
+.interest-fieldset legend{font-size:8px;color:#68796d;font-weight:800}
+.interest-options{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px}
+.interest-options label{display:flex;align-items:center;gap:7px;font-size:9px;color:#647569;line-height:1.4}
+.form-message{font-size:10px;line-height:1.5;color:#9d5b4d;margin:0;min-height:0}
+.form-message.success{color:#47724f}
+.form-submit{width:100%;justify-content:center;border:0;cursor:pointer}
+.form-footnote{font-size:9px;color:#7b897f;text-align:center;margin:2px 0}
+.prototype-warning{font-size:8px;line-height:1.65;color:#8a7662;background:#f7f0e7;padding:10px 12px;margin:16px 0 0;border-radius:4px}
+.dialog-intro{font-size:11px;line-height:1.7;color:#718076;margin:0}
+.interest-options-large{grid-template-columns:1fr 1fr;gap:13px 10px;padding:13px;background:#f1f5ee}
+.selected-activity{padding:12px;background:#edf3e9;color:var(--forest);font-size:10px;line-height:1.6}
+.selected-activity b{display:block;font-family:Manrope,sans-serif;font-size:14px}
+.detail-facts{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:14px 0}
+.detail-fact{padding:11px;background:#f0f4ed}
+.detail-fact span{display:block;font-size:7px;letter-spacing:.1em;color:#839185;margin-bottom:5px;text-transform:uppercase}
+.detail-fact b{font-size:10px;line-height:1.5;color:#395c46}
+.detail-copy{font-size:11px;line-height:1.8;color:#6f7d72}
+.detail-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.detail-actions a,.detail-actions button{font-size:10px;font-weight:800;padding:11px 13px;border:1px solid #cddbc9;background:transparent;color:var(--forest);cursor:pointer}
+.detail-actions button{background:var(--forest);color:white;border-color:var(--forest)}
+@media(max-width:900px){.main-nav{gap:13px}.nav-link{font-size:10px}.nav-cta{font-size:10px;padding:11px}.event-card{padding:18px}.dashboard-main{grid-template-columns:1fr 1.4fr}}
+@media(max-width:680px){
+  .main-nav{gap:0}.main-nav .nav-link{font-size:11px}.main-nav .nav-cta,.main-nav .nav-user{margin-top:12px;text-align:center}
+  .explore-section,.dashboard-section{padding-top:68px;padding-bottom:72px}
+  .interest-strip{align-items:flex-start;flex-direction:column;padding:19px}.interest-strip .button{margin-top:3px}
+  .subsection-heading{align-items:flex-start;flex-direction:column}.filter-wrap{width:100%;justify-content:space-between}.filter-wrap select{flex:1;max-width:62%}
+  .event-grid{grid-template-columns:1fr}.event-card{min-height:0}.event-meta{grid-template-columns:1fr 1fr}
+  .testimonial-section{padding:68px 0}.testimonial-grid{grid-template-columns:1fr}.testimonial-card{min-height:0}
+  .dashboard-content{padding:17px}.dashboard-logged-out{align-items:flex-start;flex-direction:column}
+  .dashboard-main{grid-template-columns:1fr}.interest-options,.interest-options-large{grid-template-columns:1fr 1fr}
+  .app-dialog{padding:20px}.dialog-top h2{font-size:25px}
+}
+@media(max-width:390px){.event-card-actions{gap:5px}.event-card-actions button{padding:8px}.event-meta{grid-template-columns:1fr}.interest-options,.interest-options-large{grid-template-columns:1fr}}
+
+
+/* Real community photo in the About section */
+.team-action-photo{margin:0 0 22px;background:var(--paper);border:1px solid #e7e9e1;padding:10px}
+.team-action-photo img{display:block;width:100%;height:clamp(190px,32vw,340px);object-fit:cover;object-position:center 48%;border-radius:2px}
+.team-action-photo figcaption{padding:9px 4px 2px;font-size:8px;letter-spacing:.09em;color:#829187;font-weight:700}
+.team-action-photo figcaption a{color:var(--forest);text-decoration:underline;text-underline-offset:2px}
+@media(max-width:680px){.team-action-photo{padding:7px}.team-action-photo img{height:210px}.team-action-photo figcaption{line-height:1.7}}
+
 </style>
 </head>
 <body>
   <div class="announcement"><span class="announcement-dot"></span> A little help can create a lasting impact.</div>
   <header class="site-header" id="top">
     <a class="brand" href="#home" aria-label="Volunteer Today homepage">
-      <span class="brand-mark">V<span>+</span></span>
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" role="img"><path d="M20 5 8.5 18h6L7 26h9v9h8v-9h9l-7.5-8h6L20 5Z" fill="currentColor"/><path d="M20 6 20 32" stroke="#d7f36b" stroke-width="1.6" stroke-linecap="round"/></svg></span>
       <span class="brand-name">voluntree<span>today.</span></span>
     </a>
     <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" aria-controls="mainNav">
@@ -84,11 +223,12 @@ body.lb-open{overflow:hidden}
     </button>
     <nav class="main-nav" id="mainNav" aria-label="Main navigation">
       <a href="#home" class="nav-link active">Home</a>
-      <a href="#organised" class="nav-link">Organised</a>
-      <a href="#local" class="nav-link">Local</a>
-      <a href="#international" class="nav-link">Global</a>
+      <a href="#explore" class="nav-link">Explore activities</a>
+      <a href="#testimonials" class="nav-link">Stories</a>
       <a href="#about" class="nav-link">About us</a>
-      <a href="#closing" class="nav-cta">Make a difference <span>↗</span></a>
+      <a href="#dashboard" class="nav-link" id="dashboardNav">My dashboard</a>
+      <button class="nav-cta" id="authOpenBtn" type="button">Login / Register <span>↗</span></button>
+      <button class="nav-user" id="navUserBtn" type="button" hidden></button>
     </nav>
   </header>
 
@@ -150,20 +290,20 @@ body.lb-open{overflow:hidden}
       </div>
       <div class="activity-grid organised-grid" id="organisedGrid">
         <article class="activity-card activity-feature" data-category="planet">
-          <div class="activity-art art-environment has-photo"><img class="art-photo zoomable" src="https://cdn.antaranews.com/cache/1200x800/2022/11/29/IMG-20221129-WA0000.jpg" alt="Volunteers planting mangrove seedlings on a beach in Indonesia" loading="lazy" onerror="var c=this.nextElementSibling;if(c&&c.classList.contains('photo-credit'))c.remove();this.parentElement.classList.remove('has-photo');this.remove()"><a class="photo-credit" href="https://www.antaranews.com" target="_blank" rel="noopener noreferrer" title="Open the photo's source">Photo: ANTARA News ↗</a><span class="art-symbol">✳</span><span class="art-label">CARE FOR NATURE</span><div class="art-illustration tree-art"><span class="tree-crown">●</span><span class="tree-trunk"></span><span class="ground"></span></div></div>
+          <div class="activity-art art-environment has-photo"><img class="art-photo zoomable" src="https://cdn.antaranews.com/cache/1200x800/2022/11/29/IMG-20221129-WA0000.jpg" alt="Volunteers planting mangrove seedlings on a beach in Indonesia" loading="lazy" referrerpolicy="no-referrer" onerror="var c=this.nextElementSibling;if(c&&c.classList.contains('photo-credit'))c.remove();this.parentElement.classList.remove('has-photo');this.remove()"><a class="photo-credit" href="https://www.antaranews.com" target="_blank" rel="noopener noreferrer" title="Open the photo's source">Photo: ANTARA News ↗</a><span class="art-symbol">✳</span><span class="art-label">CARE FOR NATURE</span><div class="art-illustration tree-art"><span class="tree-crown">●</span><span class="tree-trunk"></span><span class="ground"></span></div></div>
           <div class="activity-content"><div class="activity-meta"><span>01 / ENVIRONMENT</span><span class="mini-arrow">↗</span></div><h3>Environmental volunteering</h3><p>Join a group to clean public spaces, plant native trees, restore mangroves, or teach people about reducing waste.</p><div class="impact-note"><b>Positive impact</b><span>Cleaner surroundings and greater environmental awareness.</span></div><a class="org-link " href="https://wwf.id/en/id/volunteer" target="_blank" rel="noopener noreferrer"><span class="org-tag">NATIONAL · CONSERVATION</span><b>WWF-Indonesia</b><small>A conservation organisation working on nature and wildlife protection; it runs volunteer programmes.</small><span class="org-go">Visit organisation <i>↗</i></span></a></div>
         </article>
         <article class="activity-card" data-category="learning">
-          <div class="activity-art art-learning has-photo"><img class="art-photo zoomable" src="https://commons.wikimedia.org/wiki/Special:FilePath/Student_Study-Service_in_Indonesia.JPG?width=900" alt="Students taking part in a study-service programme in Indonesia" loading="lazy" referrerpolicy="no-referrer" onerror="var c=this.nextElementSibling;if(c&&c.classList.contains('photo-credit'))c.remove();this.parentElement.classList.remove('has-photo');this.remove()"><a class="photo-credit" href="https://commons.wikimedia.org/wiki/File:Student_Study-Service_in_Indonesia.JPG" target="_blank" rel="noopener noreferrer" title="Open the photo's source page">Photo: Wikimedia Commons ↗</a><span class="art-symbol">Aa</span><div class="book-art"><i></i><i></i><i></i></div><span class="art-label">SHARE WHAT YOU KNOW</span></div>
+          <div class="activity-art art-learning has-photo"><img class="art-photo zoomable" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Student_Study-Service_in_Indonesia.JPG/960px-Student_Study-Service_in_Indonesia.JPG" alt="Students taking part in a study-service programme in Indonesia" loading="lazy" referrerpolicy="no-referrer" onerror="var c=this.nextElementSibling;if(c&&c.classList.contains('photo-credit'))c.remove();this.parentElement.classList.remove('has-photo');this.remove()"><a class="photo-credit" href="https://commons.wikimedia.org/wiki/File:Student_Study-Service_in_Indonesia.JPG" target="_blank" rel="noopener noreferrer" title="Open the photo's source page">Photo: Wikimedia Commons ↗</a><span class="art-symbol">Aa</span><div class="book-art"><i></i><i></i><i></i></div><span class="art-label">SHARE WHAT YOU KNOW</span></div>
           <div class="activity-content"><div class="activity-meta"><span>02 / EDUCATION</span><span class="mini-arrow">↗</span></div><h3>Educational volunteering</h3><p>Support reading clubs, homework sessions, language practice, or creative workshops organised by a school or learning centre.</p><div class="impact-note"><b>Positive impact</b><span>More learning support and confidence for students.</span></div><a class="org-link " href="https://indonesiamengajar.org" target="_blank" rel="noopener noreferrer"><span class="org-tag">NATIONAL · EDUCATION</span><b>Indonesia Mengajar</b><small>A movement that sends young graduates to teach and support learning in remote communities.</small><span class="org-go">Visit organisation <i>↗</i></span></a></div>
         </article>
         <article class="activity-card" data-category="people">
-          <div class="activity-art art-social has-photo"><img class="art-photo zoomable" src="https://commons.wikimedia.org/wiki/Special:FilePath/Aktivitas_Kerja_Bakti_Warga_1.jpg?width=900" alt="Residents working together in a community clean-up in Indonesia" loading="lazy" referrerpolicy="no-referrer" onerror="var c=this.nextElementSibling;if(c&&c.classList.contains('photo-credit'))c.remove();this.parentElement.classList.remove('has-photo');this.remove()"><a class="photo-credit" href="https://commons.wikimedia.org/wiki/File:Aktivitas_Kerja_Bakti_Warga_1.jpg" target="_blank" rel="noopener noreferrer" title="Open the photo's source page">Photo: Wikimedia Commons ↗</a><span class="art-symbol">♡</span><div class="people-art"><i></i><i></i><i></i></div><span class="art-label">SHOW UP FOR PEOPLE</span></div>
+          <div class="activity-art art-social has-photo"><img class="art-photo zoomable" src="https://www.tzuchi.or.id/inliners/1749544729-7-foto-11-edt.jpg" alt="Volunteers assisting an older community member during a health and social support activity in Indonesia" loading="lazy" referrerpolicy="no-referrer" onerror="var c=this.nextElementSibling;if(c&&c.classList.contains('photo-credit'))c.remove();this.parentElement.classList.remove('has-photo');this.remove()"><a class="photo-credit" href="https://www.tzuchi.or.id/read-berita/peduli-kesehatan-lansia-di-kampung-pemulung/12639" target="_blank" rel="noopener noreferrer" title="Open the photo's source article">Photo: Tzu Chi Indonesia ↗</a><span class="art-symbol">♡</span><div class="people-art"><i></i><i></i><i></i></div><span class="art-label">SHOW UP FOR PEOPLE</span></div>
           <div class="activity-content"><div class="activity-meta"><span>03 / SOCIAL SUPPORT</span><span class="mini-arrow">↗</span></div><h3>Social volunteering</h3><p>Help organise inclusive community events, visit older adults with a supervised group, or prepare activity packs for families.</p><div class="impact-note"><b>Positive impact</b><span>Less social isolation and stronger community connections.</span></div><a class="org-link " href="https://sejiwa.org/en/shift/" target="_blank" rel="noopener noreferrer"><span class="org-tag">NATIONAL · YOUTH &amp; SOCIAL</span><b>SEJIWA</b><small>An Indonesian organisation behind the SHIFT youth campaign, which encourages young people to take positive action.</small><span class="org-go">Visit organisation <i>↗</i></span></a></div>
         </article>
         <article class="activity-card" data-category="people">
-          <div class="activity-art art-charity has-photo"><img class="art-photo zoomable" src="https://commons.wikimedia.org/wiki/Special:FilePath/FEMA_-_39206_-_Red_Cross_loading_food_containers_in_Texas.jpg?width=900" alt="Red Cross volunteers loading food containers for people in need" loading="lazy" referrerpolicy="no-referrer" onerror="var c=this.nextElementSibling;if(c&&c.classList.contains('photo-credit'))c.remove();this.parentElement.classList.remove('has-photo');this.remove()"><a class="photo-credit" href="https://commons.wikimedia.org/wiki/File:FEMA_-_39206_-_Red_Cross_loading_food_containers_in_Texas.jpg" target="_blank" rel="noopener noreferrer" title="Open the photo's source page">Photo: Wikimedia Commons ↗</a><span class="art-symbol">＋</span><div class="box-art"><span>GIVE</span><i>♡</i></div><span class="art-label">SHARE WHAT YOU CAN</span></div>
-          <div class="activity-content"><div class="activity-meta"><span>04 / HUMANITARIAN</span><span class="mini-arrow">↗</span></div><h3>Charity and humanitarian work</h3><p>Sort donated goods, prepare care packages, or support a verified charity's fundraising and community distribution activities.</p><div class="impact-note"><b>Positive impact</b><span>Practical support reaches people facing difficult situations.</span></div><a class="org-link " href="https://pmi.or.id" target="_blank" rel="noopener noreferrer"><span class="org-tag">NATIONAL · HUMANITARIAN</span><b>Indonesian Red Cross (PMI)</b><small>Provides disaster response, health and blood services, and relies on trained volunteers.</small><span class="org-go">Visit organisation <i>↗</i></span></a></div>
+          <div class="activity-art art-charity has-photo"><img class="art-photo zoomable" src="https://radarmukomuko.disway.id/upload/2777fa01deb80bda5d8dce0bf199ba13.jpg" alt="A young volunteer handing a box of food and daily essentials to an older resident in Indonesia" loading="lazy" referrerpolicy="no-referrer" onerror="var c=this.nextElementSibling;if(c&&c.classList.contains('photo-credit'))c.remove();this.parentElement.classList.remove('has-photo');this.remove()"><a class="photo-credit" href="https://radarmukomuko.disway.id/news/read/697897/manfaat-membantu-sesama-bagi-kehidupan-tindakan-sederhana-yang-membawa-kebaikan-untuk-banyak-orang" target="_blank" rel="noopener noreferrer" title="Open the photo's source article">Photo: Radar Mukomuko ↗</a><span class="art-symbol">＋</span><div class="box-art"><span>GIVE</span><i>♡</i></div><span class="art-label">SHARE WHAT YOU CAN</span></div>
+          <div class="activity-content"><div class="activity-meta"><span>04 / HUMANITARIAN</span><span class="mini-arrow">↗</span></div><h3>Charity and humanitarian work</h3><p>Sort collected goods, prepare care packages, and support community distribution activities.</p><div class="impact-note"><b>Positive impact</b><span>Practical support reaches people facing difficult situations.</span></div><a class="org-link " href="https://pmi.or.id" target="_blank" rel="noopener noreferrer"><span class="org-tag">NATIONAL · HUMANITARIAN</span><b>Indonesian Red Cross (PMI)</b><small>Provides disaster response, health and blood services, and relies on trained volunteers.</small><span class="org-go">Visit organisation <i>↗</i></span></a></div>
         </article>
       </div>
       <div class="source-note">The activities are ideas; the organisations are real examples where you can learn more. Programmes, schedules, age limits and eligibility depend on each organisation, so always check their website first.</div>
@@ -182,7 +322,7 @@ body.lb-open{overflow:hidden}
         <div class="local-list">
           <article class="local-item"><span class="local-number">01</span><span class="local-emoji">🧤</span><div><h3>Neighbourhood or beach clean-up</h3><p>Work with residents to collect litter and sort recyclable materials. This helps keep shared spaces cleaner and encourages responsible waste habits.</p><a class="org-chip" href="https://wwf.id/en/id/volunteer" target="_blank" rel="noopener noreferrer"><span>Learn more:</span> WWF-Indonesia <i>↗</i></a></div><span class="local-impact">CLEANER PLACES</span></article>
           <article class="local-item"><span class="local-number">02</span><span class="local-emoji">📚</span><div><h3>Reading and learning support</h3><p>Help children practise reading, basic English, or school subjects through a supervised school or community programme. This gives learners extra support and encouragement.</p><a class="org-chip" href="https://indonesiamengajar.org" target="_blank" rel="noopener noreferrer"><span>Learn more:</span> Indonesia Mengajar <i>↗</i></a></div><span class="local-impact">LEARNING FOR ALL</span></article>
-          <article class="local-item"><span class="local-number">03</span><span class="local-emoji">🥫</span><div><h3>Food and clothing donations</h3><p>Help a trusted community group collect, sort, and distribute useful goods. Careful sorting makes donations more practical and respectful for recipients.</p><a class="org-chip" href="https://foodcycle.id/volunteering/" target="_blank" rel="noopener noreferrer"><span>Learn more:</span> FoodCycle Indonesia <i>↗</i></a></div><span class="local-impact">SHARED RESOURCES</span></article>
+          <article class="local-item"><span class="local-number">03</span><span class="local-emoji">🥫</span><div><h3>Food and clothing collection</h3><p>Help a trusted community group collect, sort, and distribute useful items. Careful sorting makes collected items more practical and respectful for recipients.</p><a class="org-chip" href="https://foodcycle.id/volunteering/" target="_blank" rel="noopener noreferrer"><span>Learn more:</span> FoodCycle Indonesia <i>↗</i></a></div><span class="local-impact">SHARED RESOURCES</span></article>
           <article class="local-item"><span class="local-number">04</span><span class="local-emoji">🌱</span><div><h3>Tree and mangrove planting</h3><p>Join a properly planned planting activity using suitable local species. It can support habitat restoration and help communities care for green spaces and coastlines.</p><a class="org-chip" href="https://www.rinjanilombok.org/get-involved/volunteer" target="_blank" rel="noopener noreferrer"><span>Learn more:</span> Rinjani-Lombok MIDAS <i>↗</i></a></div><span class="local-impact">HEALTHIER ECOSYSTEMS</span></article>
           <article class="local-item"><span class="local-number">05</span><span class="local-emoji">☀️</span><div><h3>Companionship for older people</h3><p>Take part in a school- or organisation-supervised visit, conversation, or shared activity. Friendly contact can help older neighbours feel included and valued.</p><a class="org-chip" href="https://pmi.or.id" target="_blank" rel="noopener noreferrer"><span>Learn more:</span> Indonesian Red Cross (PMI) <i>↗</i></a></div><span class="local-impact">STRONGER CONNECTIONS</span></article>
         </div>
@@ -196,11 +336,57 @@ body.lb-open{overflow:hidden}
         <div class="section-heading-side"><p>International volunteering connects people and organisations across countries. It can support long-term cooperation on challenges that affect the whole world.</p><span class="section-count">GLOBAL IDEAS</span></div>
       </div>
       <div class="global-cards">
-        <article class="global-card global-card-one"><div class="global-card-top"><span>01 / PLANET</span><span>↗</span></div><div class="globe-illustration has-photo"><img class="art-photo zoomable" src="https://commons.wikimedia.org/wiki/Special:FilePath/Coral_Restoration.jpg?width=900" alt="Coral restoration work on a reef" loading="lazy" referrerpolicy="no-referrer" onerror="var c=this.nextElementSibling;if(c&&c.classList.contains('photo-credit'))c.remove();this.parentElement.classList.remove('has-photo');this.remove()"><a class="photo-credit" href="https://commons.wikimedia.org/wiki/File:Coral_Restoration.jpg" target="_blank" rel="noopener noreferrer" title="Open the photo's source page">Photo: Wikimedia Commons ↗</a><div class="globe-circle"><span>🌍</span></div><i class="orbit orbit-one"></i><i class="orbit orbit-two"></i></div><div><h3>Environmental conservation</h3><p>Join cross-country awareness campaigns, citizen-science projects, or coordinated habitat restoration led by qualified local partners.</p><div class="global-impact"><b>Global impact</b><span>Shared knowledge and cooperation can strengthen biodiversity and climate action.</span></div><a class="org-link " href="https://wwf.panda.org" target="_blank" rel="noopener noreferrer"><span class="org-tag">INTERNATIONAL · CONSERVATION</span><b>WWF (World Wide Fund for Nature)</b><small>A global conservation network active in many countries, working on wildlife, forests, oceans and climate.</small><span class="org-go">Visit organisation <i>↗</i></span></a></div></article>
-        <article class="global-card global-card-two"><div class="global-card-top"><span>02 / HUMANITY</span><span>↗</span></div><div class="globe-illustration relief-illustration has-photo"><img class="art-photo zoomable" src="https://commons.wikimedia.org/wiki/Special:FilePath/FEMA_-_35444_-_Red_Cross_deliving_supplies_to_volunteers_in_Colorado.jpg?width=900" alt="Red Cross delivering supplies to volunteers during a disaster response" loading="lazy" referrerpolicy="no-referrer" onerror="var c=this.nextElementSibling;if(c&&c.classList.contains('photo-credit'))c.remove();this.parentElement.classList.remove('has-photo');this.remove()"><a class="photo-credit" href="https://commons.wikimedia.org/wiki/File:FEMA_-_35444_-_Red_Cross_deliving_supplies_to_volunteers_in_Colorado.jpg" target="_blank" rel="noopener noreferrer" title="Open the photo's source page">Photo: Wikimedia Commons ↗</a><div class="relief-box">＋</div><span class="relief-heart">♡</span></div><div><h3>Disaster relief and recovery</h3><p>Support trusted humanitarian organisations through carefully coordinated fundraising, supply sorting, translation, or recovery education projects.</p><div class="global-impact"><b>Global impact</b><span>Communities can receive more coordinated support and resources during recovery.</span></div><a class="org-link " href="https://www.ifrc.org/get-involved/volunteer-us" target="_blank" rel="noopener noreferrer"><span class="org-tag">INTERNATIONAL · HUMANITARIAN</span><b>IFRC</b><small>The International Federation of Red Cross and Red Crescent Societies, supporting volunteers and disaster response worldwide.</small><span class="org-go">Visit organisation <i>↗</i></span></a></div></article>
-        <article class="global-card global-card-three"><div class="global-card-top"><span>03 / EDUCATION</span><span>↗</span></div><div class="globe-illustration education-illustration has-photo"><img class="art-photo zoomable" src="https://commons.wikimedia.org/wiki/Special:FilePath/USAID_Basic_Education_Program_(8313184050).jpg?width=900" alt="Children in a school supported by an international basic education programme" loading="lazy" referrerpolicy="no-referrer" onerror="var c=this.nextElementSibling;if(c&&c.classList.contains('photo-credit'))c.remove();this.parentElement.classList.remove('has-photo');this.remove()"><a class="photo-credit" href="https://commons.wikimedia.org/wiki/File:USAID_Basic_Education_Program_(8313184050).jpg" target="_blank" rel="noopener noreferrer" title="Open the photo's source page">Photo: Wikimedia Commons ↗</a><div class="screen-art"><span>abc</span><i>↔</i></div><span class="speech-art">HELLO!</span></div><div><h3>International education projects</h3><p>Take part in supervised online cultural exchanges, language practice, or learning-material projects with partner schools in other countries.</p><div class="global-impact"><b>Global impact</b><span>Students exchange perspectives and gain access to wider learning networks.</span></div><a class="org-link " href="https://www.unv.org/become-online-volunteer" target="_blank" rel="noopener noreferrer"><span class="org-tag">INTERNATIONAL · DEVELOPMENT</span><b>UN Volunteers (UNV)</b><small>The UN programme that supports volunteering for peace and development, including online volunteering from home.</small><span class="org-go">Visit organisation <i>↗</i></span></a></div></article>
+        <article class="global-card global-card-one"><div class="global-card-top"><span>01 / PLANET</span><span>↗</span></div><div class="globe-illustration has-photo"><img class="art-photo zoomable" src="https://oceangardener.org/wp-content/uploads/2025/09/word-image-11831-11.jpeg" alt="Coral restoration work on a reef" loading="lazy" referrerpolicy="no-referrer" onerror="var c=this.nextElementSibling;if(c&&c.classList.contains('photo-credit'))c.remove();this.parentElement.classList.remove('has-photo');this.remove()"><a class="photo-credit" href="https://oceangardener.org/blog/ocean-gardeners-4-weeks-coral-restoration-certificate-in-raja-ampat-west-papua/" target="_blank" rel="noopener noreferrer" title="Open the photo's source article">Photo: Ocean Gardener ↗</a><div class="globe-circle"><span>🌍</span></div><i class="orbit orbit-one"></i><i class="orbit orbit-two"></i></div><div><h3>Environmental conservation</h3><p>Join cross-country awareness campaigns, citizen-science projects, or coordinated habitat restoration led by qualified local partners.</p><div class="global-impact"><b>Global impact</b><span>Shared knowledge and cooperation can strengthen biodiversity and climate action.</span></div><a class="org-link " href="https://wwf.panda.org" target="_blank" rel="noopener noreferrer"><span class="org-tag">INTERNATIONAL · CONSERVATION</span><b>WWF (World Wide Fund for Nature)</b><small>A global conservation network active in many countries, working on wildlife, forests, oceans and climate.</small><span class="org-go">Visit organisation <i>↗</i></span></a></div></article>
+        <article class="global-card global-card-two"><div class="global-card-top"><span>02 / HUMANITY</span><span>↗</span></div><div class="globe-illustration relief-illustration has-photo"><img class="art-photo zoomable" src="https://cdn.antaranews.com/cache/1200x800/2021/09/16/IMG-20210916-WA0116.jpg" alt="A volunteer from the Indonesian Red Cross distributing relief containers to residents in Banten" loading="lazy" referrerpolicy="no-referrer" onerror="var c=this.nextElementSibling;if(c&&c.classList.contains('photo-credit'))c.remove();this.parentElement.classList.remove('has-photo');this.remove()"><a class="photo-credit" href="https://banten.antaranews.com/berita/185421/tanggap-darurat-pmi-banten-bantu-korban-bencana-di-kabupaten-kota" target="_blank" rel="noopener noreferrer" title="Open the photo's source article">Photo: ANTARA News ↗</a><div class="relief-box">＋</div><span class="relief-heart">♡</span></div><div><h3>Disaster relief and recovery</h3><p>Support trusted humanitarian organisations through carefully coordinated supply sorting, translation, and recovery education projects.</p><div class="global-impact"><b>Global impact</b><span>Communities can receive more coordinated support and resources during recovery.</span></div><a class="org-link " href="https://www.ifrc.org/get-involved/volunteer-us" target="_blank" rel="noopener noreferrer"><span class="org-tag">INTERNATIONAL · HUMANITARIAN</span><b>IFRC</b><small>The International Federation of Red Cross and Red Crescent Societies, supporting volunteers and disaster response worldwide.</small><span class="org-go">Visit organisation <i>↗</i></span></a></div></article>
+        <article class="global-card global-card-three"><div class="global-card-top"><span>03 / EDUCATION</span><span>↗</span></div><div class="globe-illustration education-illustration has-photo"><img class="art-photo zoomable" src="https://asset.mediaindonesia.com/photos/2023/12/rdi_20231205_kampus-mengajar-16.jpg" alt="University volunteers supporting children during a classroom reading activity in Indonesia" loading="lazy" referrerpolicy="no-referrer" onerror="var c=this.nextElementSibling;if(c&&c.classList.contains('photo-credit'))c.remove();this.parentElement.classList.remove('has-photo');this.remove()"><a class="photo-credit" href="https://mediaindonesia.com/galleries/detail_galleries/33935-pengabdian-kampus-mengajar-untuk-pendidikan-indonesia" target="_blank" rel="noopener noreferrer" title="Open the photo's source article">Photo: Media Indonesia ↗</a><div class="screen-art"><span>abc</span><i>↔</i></div><span class="speech-art">HELLO!</span></div><div><h3>International education projects</h3><p>Take part in supervised online cultural exchanges, language practice, or learning-material projects with partner schools in other countries.</p><div class="global-impact"><b>Global impact</b><span>Students exchange perspectives and gain access to wider learning networks.</span></div><a class="org-link " href="https://www.unv.org/become-online-volunteer" target="_blank" rel="noopener noreferrer"><span class="org-tag">INTERNATIONAL · DEVELOPMENT</span><b>UN Volunteers (UNV)</b><small>The UN programme that supports volunteering for peace and development, including online volunteering from home.</small><span class="org-go">Visit organisation <i>↗</i></span></a></div></article>
       </div>
       <div class="global-footnote"><span class="global-footnote-icon">✳</span><p>International projects should be organised with reputable partners. Disaster response, wildlife care, and field conservation require appropriate training, permissions, and adult or professional supervision.</p></div>
+    </section>
+
+    <!-- Interactive opportunity explorer: the dates below are clearly marked sample data. -->
+    <section class="explore-section section-shell" id="explore">
+      <div class="section-heading">
+        <div><div class="section-kicker">05 — FIND YOUR WAY TO HELP</div><h2>Make time for<br><em>what matters.</em></h2></div>
+        <div class="section-heading-side"><p>Explore sample opportunities, check the practical details, and register for an activity. Replace every sample schedule and organiser detail with confirmed information before publishing.</p><span class="section-count">BROWSE WITHOUT AN ACCOUNT</span></div>
+      </div>
+      <div class="demo-notice"><span>ⓘ</span><p><b>Sample opportunity listings.</b> Dates, venues, organisers, contacts, and capacity below are demonstration data for testing the website. They are not confirmed public events.</p></div>
+      <div class="interest-strip" id="interestStrip">
+        <div><span class="section-kicker">A MORE PERSONAL EXPERIENCE</span><h3>What causes do you care about?</h3><p>Choose your interests to see matching activities. You can change them at any time.</p></div>
+        <button class="button button-dark" id="chooseInterestsBtn" type="button">Choose interests <span>↗</span></button>
+      </div>
+      <div class="recommendation-block" id="recommendationBlock" hidden>
+        <div class="subsection-heading"><div><span class="section-kicker">PICKED FOR YOUR INTERESTS</span><h3>Recommended for you</h3></div><button class="subtle-button" id="editInterestsBtn" type="button">Edit interests ↗</button></div>
+        <div class="event-grid" id="recommendedGrid"></div>
+      </div>
+      <div class="subsection-heading all-events-heading"><div><span class="section-kicker">OPEN TO EVERYONE</span><h3>All opportunities</h3></div><label class="filter-wrap">Filter by cause
+        <select id="eventFilter" aria-label="Filter opportunities by cause"><option value="all">All causes</option><option value="environment">Environment</option><option value="education">Education</option><option value="community">Community</option><option value="animal">Animal welfare</option><option value="health">Health and social welfare</option><option value="disaster">Disaster relief</option><option value="arts">Arts and culture</option></select>
+      </label></div>
+      <div class="event-grid" id="eventGrid"></div>
+    </section>
+
+    <section class="testimonial-section" id="testimonials">
+      <div class="section-shell">
+        <div class="section-heading light-heading">
+          <div><div class="section-kicker">06 — VOICES FROM THE COMMUNITY</div><h2>Every experience<br><em>has a story.</em></h2></div>
+          <div class="section-heading-side"><p>Volunteering can teach us to listen, cooperate, and see our communities from a new perspective.</p><span class="section-count">SAMPLE STORIES · NOT REAL REVIEWS</span></div>
+        </div>
+        <div class="testimonial-grid">
+          <article class="testimonial-card"><div class="testimonial-top"><span class="sample-label">SAMPLE STORY</span><span class="quote-symbol">“</span></div><p>Taking part in a community clean-up helped me understand how small habits can make shared spaces better. I also learned how much a team can accomplish together.</p><div class="testimonial-person"><span class="testimonial-avatar avatar-green">A</span><div><b>Alex · Sample profile</b><small>Environmental clean-up</small></div></div></article>
+          <article class="testimonial-card"><div class="testimonial-top"><span class="sample-label">SAMPLE STORY</span><span class="quote-symbol">“</span></div><p>Helping with a reading session reminded me that everyone learns at a different pace. Being patient and encouraging can make a meaningful difference.</p><div class="testimonial-person"><span class="testimonial-avatar avatar-peach">N</span><div><b>Nadia · Sample profile</b><small>Education support</small></div></div></article>
+          <article class="testimonial-card"><div class="testimonial-top"><span class="sample-label">SAMPLE STORY</span><span class="quote-symbol">“</span></div><p>Working with other volunteers made me more confident about sharing ideas and taking responsibility. It showed me that helping is something we can learn together.</p><div class="testimonial-person"><span class="testimonial-avatar avatar-lilac">R</span><div><b>Rafi · Sample profile</b><small>Community activity</small></div></div></article>
+        </div>
+        <p class="testimonial-disclaimer">These are illustrative sample stories written for the website prototype, not testimonials from actual participants. Replace them only with genuine, permission-approved submissions.</p>
+      </div>
+    </section>
+
+    <section class="dashboard-section section-shell" id="dashboard">
+      <div class="section-heading">
+        <div><div class="section-kicker">07 — YOUR VOLUNTEER SPACE</div><h2>Keep track of<br><em>your impact.</em></h2></div>
+        <div class="section-heading-side"><p>Your dashboard brings your profile, chosen causes, and activity registrations together in one place.</p><span class="section-count">PERSONAL ACTIVITY OVERVIEW</span></div>
+      </div>
+      <div id="dashboardContent" class="dashboard-content">
+        <div class="dashboard-logged-out"><span class="dashboard-icon">♧</span><div><h3>Your volunteering journey starts here.</h3><p>Sign in or create a demo account to save your interests and see the activities you register for on this browser.</p></div><button class="button button-dark" id="dashboardLoginBtn" type="button">Login / Register <span>↗</span></button></div>
+      </div>
     </section>
 
     <section class="how-section">
@@ -208,7 +394,7 @@ body.lb-open{overflow:hidden}
         <div><div class="section-kicker">YOUR FIRST STEP</div><h2>Make your good<br><em>intention practical.</em></h2><p class="how-intro">A thoughtful volunteer is prepared, respectful, and ready to learn.</p></div>
         <div class="steps-list">
           <div class="step"><span>01</span><div><h3>Choose a cause</h3><p>Think about the community or issue you care about.</p></div></div>
-          <div class="step"><span>02</span><div><h3>Find a trusted organiser</h3><p>Check the organisation, activity details, and how donations or support are used.</p></div></div>
+          <div class="step"><span>02</span><div><h3>Find a trusted organiser</h3><p>Check the organisation, activity details, and how your time and skills will be used.</p></div></div>
           <div class="step"><span>03</span><div><h3>Ask, prepare, and participate</h3><p>Follow instructions, respect the people you support, and work within your skills.</p></div></div>
           <div class="step"><span>04</span><div><h3>Reflect and keep contributing</h3><p>Learn from the experience and look for safe ways to stay involved.</p></div></div>
         </div>
@@ -217,9 +403,14 @@ body.lb-open{overflow:hidden}
 
     <section class="about-section section-shell" id="about">
       <div class="section-heading">
-        <div><div class="section-kicker">05 — THE PEOPLE BEHIND THE PROJECT</div><h2>Meet our<br><em>little team.</em></h2></div>
+        <div><div class="section-kicker">08 — THE PEOPLE BEHIND THE PROJECT</div><h2>Meet our<br><em>little team.</em></h2></div>
         <div class="section-heading-side"><p>We are a team of three students who believe that learning about volunteering is also a way to inspire action. Get to know the people behind this website.</p><span class="section-count">3 STUDENTS · 1 SHARED GOAL</span></div>
       </div>
+
+      <figure class="team-action-photo">
+        <img class="zoomable" src="https://api.kemenpar.go.id/storage/app/resources/image_artikel/FOTO%2010%20Menpar%20Luncurkan%20Gerakan%20Wisata%20Bersih.jpg" alt="Community volunteers taking part in a beach clean-up in Indonesia" loading="lazy" referrerpolicy="no-referrer">
+        <figcaption>COMMUNITY ACTION IN INDONESIA · ILLUSTRATIVE PHOTO · <a href="https://kemenpar.go.id/berita/siaran-pers-menpar-luncurkan-gerakan-wisata-bersih-wujudkan-destinasi-berkualitas-dan-berkelanjutan" target="_blank" rel="noopener noreferrer">Photo: Ministry of Tourism ↗</a></figcaption>
+      </figure>
 
       <div class="team-grid">
         <!-- MEMBER 1: Edit the name, introduction, role, and image path below. -->
@@ -260,17 +451,84 @@ body.lb-open{overflow:hidden}
     <section class="closing-section" id="closing">
       <div class="closing-orbit orbit-left">♡</div><div class="closing-orbit orbit-right">✳</div>
       <div class="section-shell closing-inner">
-        <div class="section-kicker">06 — EVERY ACTION COUNTS</div>
+        <div class="section-kicker">09 — EVERY ACTION COUNTS</div>
         <h2>Be the reason<br><em>someone smiles.</em></h2>
         <p>You do not have to change the whole world in one day. Start with one thoughtful action, invite others to join, and keep showing up.</p>
-        <a class="button button-lime" href="#home">Start with one action <span>↑</span></a>
+        <a class="button button-lime" href="#explore">Explore opportunities <span>↗</span></a>
         <div class="closing-mantra"><span>THINK GLOBALLY</span><i>✳</i><span>ACT LOCALLY</span><i>✳</i><span>MAKE EVERY ACTION COUNT</span></div>
       </div>
     </section>
   </main>
 
+  <dialog class="app-dialog" id="authDialog" aria-labelledby="authDialogTitle">
+    <div class="dialog-top"><div><span class="section-kicker">YOUR VOLUNTREE ACCOUNT</span><h2 id="authDialogTitle">Welcome back.</h2></div><button class="dialog-close" type="button" data-close-dialog aria-label="Close">×</button></div>
+    <div class="auth-tabs" role="tablist" aria-label="Account options"><button class="auth-tab active" type="button" data-auth-mode="login" role="tab" aria-selected="true">Login</button><button class="auth-tab" type="button" data-auth-mode="register" role="tab" aria-selected="false">Create account</button></div>
+    <form id="loginForm" class="app-form">
+      <label>Email address<input name="email" type="email" autocomplete="username" required placeholder="you@example.com"></label>
+      <label>Password<input name="password" type="password" autocomplete="current-password" required minlength="8" placeholder="At least 8 characters"></label>
+      <div class="form-inline"><label class="check-label"><input type="checkbox" name="remember"> Remember me on this browser</label><button class="text-button" id="forgotPasswordBtn" type="button">Forgot password?</button></div>
+      <p class="form-message" id="loginMessage" role="status"></p>
+      <button class="button button-dark form-submit" type="submit">Login <span>↗</span></button>
+      <p class="form-footnote">New here? <button class="text-button" type="button" data-auth-mode="register">Create an account</button></p>
+    </form>
+    <form id="registerForm" class="app-form" hidden>
+      <label>Full name<input name="name" type="text" autocomplete="name" required maxlength="80" placeholder="Your full name"></label>
+      <label>Email address<input name="email" type="email" autocomplete="email" required maxlength="120" placeholder="you@example.com"></label>
+      <label>Password<input name="password" type="password" autocomplete="new-password" required minlength="8" placeholder="At least 8 characters"></label>
+      <label>Location<input name="location" type="text" autocomplete="address-level2" required maxlength="100" placeholder="City, country"></label>
+      <label>About you <span class="optional-label">OPTIONAL</span><textarea name="bio" rows="2" maxlength="240" placeholder="Your skills or what motivates you"></textarea></label>
+      <fieldset class="interest-fieldset"><legend>What causes interest you? <span class="optional-label">OPTIONAL · SELECT MULTIPLE</span></legend><div class="interest-options">
+        <label><input type="checkbox" name="interests" value="environment"> Environment</label><label><input type="checkbox" name="interests" value="education"> Education</label><label><input type="checkbox" name="interests" value="animal"> Animal welfare</label><label><input type="checkbox" name="interests" value="community"> Community development</label><label><input type="checkbox" name="interests" value="health"> Health and social welfare</label><label><input type="checkbox" name="interests" value="disaster"> Disaster relief</label><label><input type="checkbox" name="interests" value="arts"> Arts and culture</label>
+      </div></fieldset>
+      <p class="form-message" id="registerMessage" role="status"></p>
+      <button class="button button-dark form-submit" type="submit">Create demo account <span>↗</span></button>
+      <p class="form-footnote">Already registered? <button class="text-button" type="button" data-auth-mode="login">Login</button></p>
+    </form>
+    <p class="prototype-warning"><b>Prototype privacy notice:</b> This standalone demo stores profile, registration, and a password verifier in this browser only. Use test details and a unique test password—not your real password or sensitive personal information. It is not secure production authentication.</p>
+  </dialog>
+
+  <dialog class="app-dialog detail-dialog" id="detailDialog" aria-labelledby="detailTitle">
+    <div class="dialog-top"><div><span class="section-kicker">OPPORTUNITY DETAILS</span><h2 id="detailTitle">Activity</h2></div><button class="dialog-close" type="button" data-close-dialog aria-label="Close">×</button></div>
+    <div id="detailContent"></div>
+  </dialog>
+
+  <dialog class="app-dialog registration-dialog" id="registrationDialog" aria-labelledby="registrationTitle">
+    <div class="dialog-top"><div><span class="section-kicker">TAKE THE NEXT STEP</span><h2 id="registrationTitle">Join an activity.</h2></div><button class="dialog-close" type="button" data-close-dialog aria-label="Close">×</button></div>
+    <form id="activityRegistrationForm" class="app-form">
+      <div class="selected-activity" id="selectedActivity"></div>
+      <label>Full name<input name="name" type="text" required maxlength="80" autocomplete="name"></label>
+      <label>Email address<input name="email" type="email" required maxlength="120" autocomplete="email"></label>
+      <label>Phone number <span class="optional-label">DEMO INPUT</span><input name="phone" type="tel" required maxlength="30" placeholder="Use a sample number for this prototype"></label>
+      <label>Preferred session<select name="session" id="registrationSession" required></select></label>
+      <label>Skills or previous experience <span class="optional-label">OPTIONAL</span><textarea name="experience" rows="2" maxlength="300" placeholder="e.g. teamwork, gardening, tutoring"></textarea></label>
+      <label>Additional notes <span class="optional-label">OPTIONAL</span><textarea name="notes" rows="2" maxlength="300" placeholder="Anything the organiser should know?"></textarea></label>
+      <label class="check-label consent-label"><input type="checkbox" name="confirm" required> I understand this is a sample listing and the schedule must be confirmed with the organiser.</label>
+      <p class="form-message" id="registrationMessage" role="status"></p>
+      <button class="button button-dark form-submit" type="submit">Confirm registration <span>↗</span></button>
+    </form>
+    <p class="prototype-warning">Use sample contact details only. A real deployment should collect contact information through a secure backend and explain how it is used.</p>
+  </dialog>
+
+  <dialog class="app-dialog interests-dialog" id="interestsDialog" aria-labelledby="interestsTitle">
+    <div class="dialog-top"><div><span class="section-kicker">YOUR CAUSES</span><h2 id="interestsTitle">What matters to you?</h2></div><button class="dialog-close" type="button" data-close-dialog aria-label="Close">×</button></div>
+    <form id="interestsForm" class="app-form">
+      <p class="dialog-intro">Choose as many causes as you like. This is optional, and you can still explore every activity.</p>
+      <div class="interest-options interest-options-large">
+        <label><input type="checkbox" name="interests" value="environment"> 🌱 Environmental conservation</label>
+        <label><input type="checkbox" name="interests" value="education"> 📚 Education</label>
+        <label><input type="checkbox" name="interests" value="animal"> 🐾 Animal welfare</label>
+        <label><input type="checkbox" name="interests" value="community"> 🏘️ Community development</label>
+        <label><input type="checkbox" name="interests" value="health"> ♡ Healthcare and social welfare</label>
+        <label><input type="checkbox" name="interests" value="disaster"> ⛑️ Disaster relief</label>
+        <label><input type="checkbox" name="interests" value="arts"> 🎨 Arts and culture</label>
+      </div>
+      <p class="form-message" id="interestsMessage" role="status"></p>
+      <button class="button button-dark form-submit" type="submit">Save my interests <span>↗</span></button>
+    </form>
+  </dialog>
+
   <footer class="site-footer">
-    <div class="footer-top"><a class="brand footer-brand" href="#home"><span class="brand-mark">V<span>+</span></span><span class="brand-name">volunteer<span>today.</span></span></a><p>Small Actions. Big Impact. A Better World.</p><a class="back-top" href="#top">BACK TO TOP ↑</a></div>
+    <div class="footer-top"><a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 40" role="img"><path d="M20 5 8.5 18h6L7 26h9v9h8v-9h9l-7.5-8h6L20 5Z" fill="currentColor"/><path d="M20 6 20 32" stroke="#d7f36b" stroke-width="1.6" stroke-linecap="round"/></svg></span><span class="brand-name">volunteer<span>today.</span></span></a><p>Small Actions. Big Impact. A Better World.</p><a class="back-top" href="#top">BACK TO TOP ↑</a></div>
     <div class="footer-bottom"><span>© <span id="year"></span> Volunteer Today, Change Tomorrow.</span><span>Made with care by our student team.</span></div>
     <div class="sources" id="sources">
       <details><summary>Information sources & further reading</summary>
@@ -452,5 +710,430 @@ body.lb-open{overflow:hidden}
 })();
 
   </script>
+
+<script>
+(() => {
+  'use strict';
+
+  const STORE_USERS = 'voluntree_demo_users_v1';
+  const STORE_REGS = 'voluntree_demo_registrations_v1';
+  const STORE_SESSION = 'voluntree_demo_session_v1';
+  const STORE_REMEMBER = 'voluntree_demo_remember_v1';
+  const categories = {
+    environment: 'Environmental conservation', education: 'Education',
+    animal: 'Animal welfare', community: 'Community development',
+    health: 'Health and social welfare', disaster: 'Disaster relief',
+    arts: 'Arts and culture'
+  };
+
+  // These are illustrative listings only. Replace them with organiser-confirmed events.
+  const activities = [
+    {
+      id:'mangrove-care', title:'Mangrove Care & Coastal Clean-up', category:'environment',
+      description:'Work in a supervised team to collect litter, learn about coastal ecosystems, and help care for a designated planting area. Bring a reusable water bottle and wear outdoor-friendly clothing.',
+      date:'2026-12-05', start:'07:00', end:'10:00', location:'Sample meeting point, Pontianak, West Kalimantan',
+      mapQuery:'public meeting point Pontianak West Kalimantan', organiser:'Voluntree Community Team (sample organiser)',
+      skills:'No experience required; teamwork and interest in nature are helpful.',
+      capacity:18, deadline:'2026-12-02T17:00:00+07:00', contact:'organiser@example.org',
+      sessions:['2026-12-05 · 07:00–10:00 WIB'], tags:['environment']
+    },
+    {
+      id:'reading-circle', title:'Weekend Reading Circle', category:'education',
+      description:'Support a small-group reading activity with younger learners under the supervision of a teacher or programme coordinator. Volunteers can help prepare materials and encourage reading practice.',
+      date:'2026-12-12', start:'09:00', end:'11:30', location:'Sample community learning centre, Pontianak, West Kalimantan',
+      mapQuery:'community learning centre Pontianak West Kalimantan', organiser:'Community Learning Partners (sample organiser)',
+      skills:'Patience, clear communication, and willingness to follow the supervisor’s guidance.',
+      capacity:12, deadline:'2026-12-09T17:00:00+07:00', contact:'learning@example.org',
+      sessions:['2026-12-12 · 09:00–11:30 WIB'], tags:['education','community']
+    },
+    {
+      id:'community-packs', title:'Community Essentials Sorting', category:'community',
+      description:'Help sort, label, and prepare essential-goods packages for a community distribution programme. The activity focuses on respectful teamwork and careful organisation.',
+      date:'2026-12-19', start:'08:30', end:'11:30', location:'Sample community hall, Pontianak, West Kalimantan',
+      mapQuery:'community hall Pontianak West Kalimantan', organiser:'Neighbourhood Support Group (sample organiser)',
+      skills:'Organisation and teamwork are useful; instructions and materials are provided.',
+      capacity:20, deadline:'2026-12-16T17:00:00+07:00', contact:'community@example.org',
+      sessions:['2026-12-19 · 08:30–11:30 WIB'], tags:['community','health']
+    },
+    {
+      id:'animal-awareness', title:'Animal Welfare Awareness Day', category:'animal',
+      description:'Assist with preparing educational materials and welcoming visitors at an animal-welfare awareness activity. This sample event does not involve handling animals.',
+      date:'2026-12-20', start:'09:00', end:'12:00', location:'Sample public activity venue, Pontianak, West Kalimantan',
+      mapQuery:'public activity venue Pontianak West Kalimantan', organiser:'Animal Care Network (sample organiser)',
+      skills:'Kind communication and interest in animal welfare; no animal-handling experience needed.',
+      capacity:10, deadline:'2026-12-17T17:00:00+07:00', contact:'animals@example.org',
+      sessions:['2026-12-20 · 09:00–12:00 WIB'], tags:['animal','community']
+    },
+    {
+      id:'health-awareness', title:'Healthy Habits Information Booth', category:'health',
+      description:'Help a supervised team arrange simple educational materials and guide visitors to reliable health-information resources. Volunteers do not provide medical advice.',
+      date:'2026-12-26', start:'08:00', end:'11:00', location:'Sample community centre, Pontianak, West Kalimantan',
+      mapQuery:'community centre Pontianak West Kalimantan', organiser:'Community Wellness Team (sample organiser)',
+      skills:'Friendly communication; follow the coordinator’s instructions.',
+      capacity:14, deadline:'2026-12-23T17:00:00+07:00', contact:'wellness@example.org',
+      sessions:['2026-12-26 · 08:00–11:00 WIB'], tags:['health','community']
+    },
+    {
+      id:'arts-workshop', title:'Creative Arts for the Community', category:'arts',
+      description:'Help prepare materials and support a supervised creative workshop where participants can explore drawing, crafts, and collaborative activities.',
+      date:'2027-01-09', start:'13:00', end:'16:00', location:'Sample arts room, Pontianak, West Kalimantan',
+      mapQuery:'arts workshop venue Pontianak West Kalimantan', organiser:'Creative Neighbours (sample organiser)',
+      skills:'Creativity and patience are helpful; beginners are welcome.',
+      capacity:16, deadline:'2027-01-06T17:00:00+07:00', contact:'arts@example.org',
+      sessions:['2027-01-09 · 13:00–16:00 WIB'], tags:['arts','education']
+    },
+    {
+      id:'preparedness-learning', title:'Community Preparedness Learning Day', category:'disaster',
+      description:'Support a supervised community learning session by arranging materials and helping participants navigate preparedness information from recognised organisations.',
+      date:'2027-01-16', start:'09:00', end:'12:00', location:'Sample learning venue, Pontianak, West Kalimantan',
+      mapQuery:'community learning venue Pontianak West Kalimantan', organiser:'Preparedness Education Team (sample organiser)',
+      skills:'Organisation and willingness to learn. This is an educational activity, not emergency response.',
+      capacity:15, deadline:'2027-01-13T17:00:00+07:00', contact:'preparedness@example.org',
+      sessions:['2027-01-16 · 09:00–12:00 WIB'], tags:['disaster','education']
+    }
+  ];
+
+  const $ = (sel, root=document) => root.querySelector(sel);
+  const $$ = (sel, root=document) => [...root.querySelectorAll(sel)];
+  const authDialog = $('#authDialog');
+  const detailDialog = $('#detailDialog');
+  const registrationDialog = $('#registrationDialog');
+  const interestsDialog = $('#interestsDialog');
+  let currentUser = null;
+  let pendingActivityId = null;
+  let selectedActivityId = null;
+
+  function readStore(key, fallback) {
+    try { const value = JSON.parse(localStorage.getItem(key)); return value ?? fallback; }
+    catch { return fallback; }
+  }
+  function writeStore(key, value) { localStorage.setItem(key, JSON.stringify(value)); }
+  function users() { return readStore(STORE_USERS, []); }
+  function registrations() { return readStore(STORE_REGS, []); }
+  function setMessage(id, message, success=false) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.textContent = message;
+    el.classList.toggle('success', success);
+  }
+  function normaliseEmail(value) { return String(value || '').trim().toLowerCase(); }
+  function escapeHTML(value) {
+    return String(value ?? '').replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+  }
+  function dateLabel(date) {
+    return new Date(date + 'T12:00:00+07:00').toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric',timeZone:'Asia/Pontianak'});
+  }
+  function eventState(activity) {
+    const now = new Date();
+    const deadline = new Date(activity.deadline);
+    const start = new Date(`${activity.date}T${activity.start}:00+07:00`);
+    const count = registrations().filter(r => r.activityId === activity.id).length;
+    if (count >= activity.capacity) return {label:'Fully booked', cls:'full', count};
+    if (now > deadline || now >= start) return {label:'Registration closed', cls:'closed', count};
+    return {label:'Registration open', cls:'', count};
+  }
+  function createEventCard(activity) {
+    const state = eventState(activity);
+    const slots = Math.max(0, activity.capacity - state.count);
+    const isClosed = state.cls !== '';
+    return `<article class="event-card">
+      <div class="event-card-top"><span class="event-category">${escapeHTML(categories[activity.category] || 'Volunteering').toUpperCase()}</span><span class="event-status ${state.cls}">${state.label}</span></div>
+      <h4>${escapeHTML(activity.title)}</h4>
+      <p>${escapeHTML(activity.description)}</p>
+      <div class="event-meta">
+        <div><span>Date & time</span><b>${dateLabel(activity.date)} · ${activity.start}–${activity.end} WIB</b></div>
+        <div><span>Location</span><b>${escapeHTML(activity.location)}</b></div>
+        <div><span>Organiser</span><b>${escapeHTML(activity.organiser)}</b></div>
+        <div><span>Availability</span><b>${slots} of ${activity.capacity} sample places</b></div>
+      </div>
+      <div class="event-card-bottom"><small>Deadline: ${dateLabel(activity.deadline.slice(0,10))}</small><div class="event-card-actions"><button type="button" data-view="${activity.id}">Details</button><button type="button" class="primary" data-join="${activity.id}" ${isClosed?'disabled':''}>Join</button></div></div>
+    </article>`;
+  }
+  function renderEvents() {
+    const filter = $('#eventFilter')?.value || 'all';
+    const visible = activities.filter(a => filter === 'all' || a.category === filter || a.tags.includes(filter));
+    $('#eventGrid').innerHTML = visible.length ? visible.map(createEventCard).join('') : '<div class="empty-events">No sample activities match this filter yet.</div>';
+    const interests = currentUser?.interests || [];
+    const recommended = activities.filter(a => interests.some(i => a.category === i || a.tags.includes(i)));
+    $('#recommendationBlock').hidden = !currentUser || interests.length === 0;
+    $('#recommendedGrid').innerHTML = recommended.length ? recommended.slice(0,4).map(createEventCard).join('') : '<div class="empty-events">No matching sample activities. You can still browse all opportunities below.</div>';
+    $('#interestStrip').querySelector('h3').textContent = currentUser ? 'Your interests shape your suggestions.' : 'What causes do you care about?';
+    $('#interestStrip').querySelector('p').textContent = currentUser ? 'Your selected causes are used to suggest relevant sample activities.' : 'Choose your interests to see matching activities. You can change them at any time.';
+    $('#chooseInterestsBtn').textContent = currentUser ? 'Set my interests ↗' : 'Choose interests ↗';
+  }
+  function setAuthMode(mode) {
+    const isLogin = mode === 'login';
+    $('#loginForm').hidden = !isLogin;
+    $('#registerForm').hidden = isLogin;
+    $$('.auth-tab').forEach(tab => {
+      const active = tab.dataset.authMode === mode;
+      tab.classList.toggle('active',active);
+      tab.setAttribute('aria-selected',String(active));
+    });
+    $('#authDialogTitle').textContent = isLogin ? 'Welcome back.' : 'Grow with us.';
+    setMessage('loginMessage',''); setMessage('registerMessage','');
+  }
+  function openAuth(mode='login') {
+    setAuthMode(mode);
+    if (!authDialog.open) authDialog.showModal();
+  }
+  function saveUser(user, remember) {
+    currentUser = user;
+    const session = {email:user.email};
+    sessionStorage.setItem(STORE_SESSION,JSON.stringify(session));
+    if (remember) localStorage.setItem(STORE_REMEMBER,JSON.stringify(session));
+    else localStorage.removeItem(STORE_REMEMBER);
+    updateUI();
+  }
+  function restoreSession() {
+    const session = readStore(STORE_REMEMBER,null) || readStore(STORE_SESSION,null);
+    if (session?.email) currentUser = users().find(u => u.email === session.email) || null;
+  }
+  function logout() {
+    currentUser = null;
+    sessionStorage.removeItem(STORE_SESSION);
+    localStorage.removeItem(STORE_REMEMBER);
+    updateUI();
+  }
+  async function passwordVerifier(password, saltHex) {
+    if (!window.crypto?.subtle) throw new Error('Secure browser crypto is unavailable. Open this demo through HTTPS (for example, GitHub Pages) or localhost.');
+    const enc = new TextEncoder();
+    const key = await crypto.subtle.importKey('raw',enc.encode(password),'PBKDF2',false,['deriveBits']);
+    const bits = await crypto.subtle.deriveBits({name:'PBKDF2',salt:Uint8Array.from(saltHex.match(/.{1,2}/g).map(h=>parseInt(h,16))),iterations:120000,hash:'SHA-256'},key,256);
+    return [...new Uint8Array(bits)].map(b=>b.toString(16).padStart(2,'0')).join('');
+  }
+  function randomSalt() {
+    const bytes = new Uint8Array(16);
+    crypto.getRandomValues(bytes);
+    return [...bytes].map(b=>b.toString(16).padStart(2,'0')).join('');
+  }
+  function updateUI() {
+    const authBtn = $('#authOpenBtn'), userBtn = $('#navUserBtn');
+    authBtn.hidden = !!currentUser;
+    userBtn.hidden = !currentUser;
+    userBtn.textContent = currentUser ? `${currentUser.name.split(' ')[0]} · Account` : '';
+    $('#dashboardContent').innerHTML = currentUser ? dashboardHTML() : `
+      <div class="dashboard-logged-out"><span class="dashboard-icon">♧</span><div><h3>Your volunteering journey starts here.</h3><p>Sign in or create a demo account to save your interests and see the activities you register for on this browser.</p></div><button class="button button-dark" id="dashboardLoginBtn" type="button">Login / Register <span>↗</span></button></div>`;
+    renderEvents();
+  }
+  function dashboardHTML() {
+    const myRegs = registrations().filter(r => r.userEmail === currentUser.email);
+    const chips = (currentUser.interests || []).map(i=>`<span class="interest-chip">${escapeHTML(categories[i]||i)}</span>`).join('') || '<span class="interest-chip">No interests selected</span>';
+    const rows = myRegs.map(r => {
+      const a = activities.find(x=>x.id===r.activityId);
+      if (!a) return '';
+      return `<div class="booking-row"><div><b>${escapeHTML(a.title)}</b><small>${dateLabel(a.date)} · ${a.start}–${a.end} WIB<br>${escapeHTML(a.location)}</small></div><span class="booking-status">${escapeHTML(r.status || 'Registered')}</span><button type="button" data-cancel="${r.id}">Cancel registration</button></div>`;
+    }).join('');
+    return `<div class="dashboard-main">
+      <aside class="dashboard-profile"><span class="section-kicker">YOUR PROFILE</span><h3>${escapeHTML(currentUser.name)}</h3><p>${escapeHTML(currentUser.email)}<br>${escapeHTML(currentUser.location || 'Location not provided')}</p>
+        ${currentUser.bio ? `<p>${escapeHTML(currentUser.bio)}</p>` : ''}
+        <div class="profile-detail"><b>My interests</b><div class="interest-summary">${chips}</div></div>
+        <div class="dashboard-actions"><button type="button" id="dashboardEditInterests">Edit interests</button><button type="button" id="dashboardLogout">Log out</button></div>
+      </aside>
+      <div class="dashboard-bookings"><span class="section-kicker">YOUR ACTIVITY</span><h3>My registrations</h3>${rows || '<div class="dashboard-empty">You have not registered for a sample activity yet. Explore the opportunities above to get started.</div>'}</div>
+    </div>`;
+  }
+
+  function renderDetail(id) {
+    const a = activities.find(x=>x.id===id);
+    if (!a) return;
+    const state = eventState(a);
+    const available = Math.max(0,a.capacity-state.count);
+    $('#detailTitle').textContent = a.title;
+    $('#detailContent').innerHTML = `
+      <span class="event-status ${state.cls}">${state.label}</span>
+      <p class="detail-copy">${escapeHTML(a.description)}</p>
+      <div class="detail-facts">
+        <div class="detail-fact"><span>Date</span><b>${dateLabel(a.date)}</b></div>
+        <div class="detail-fact"><span>Time</span><b>${a.start}–${a.end} WIB</b></div>
+        <div class="detail-fact"><span>Meeting point</span><b>${escapeHTML(a.location)}</b></div>
+        <div class="detail-fact"><span>Organiser</span><b>${escapeHTML(a.organiser)}</b></div>
+        <div class="detail-fact"><span>Skills / qualifications</span><b>${escapeHTML(a.skills)}</b></div>
+        <div class="detail-fact"><span>Places left</span><b>${available} of ${a.capacity} sample places</b></div>
+        <div class="detail-fact"><span>Registration deadline</span><b>${dateLabel(a.deadline.slice(0,10))} · 17:00 WIB</b></div>
+        <div class="detail-fact"><span>Contact (placeholder)</span><b>${escapeHTML(a.contact)}</b></div>
+      </div>
+      <p class="detail-copy"><b>Important:</b> This is a sample listing created to demonstrate the registration flow. Confirm event details and the contact person before publishing or attending.</p>
+      <div class="detail-actions"><a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(a.mapQuery)}" target="_blank" rel="noopener noreferrer">View map ↗</a><button type="button" id="detailJoinBtn" ${state.cls?'disabled':''}>Register now ↗</button></div>`;
+    $('#detailJoinBtn').addEventListener('click',()=>{detailDialog.close();startRegistration(id);});
+    detailDialog.showModal();
+  }
+  function startRegistration(id) {
+    const a = activities.find(x=>x.id===id);
+    if (!a) return;
+    const state = eventState(a);
+    if (state.cls) { alert(state.label === 'Fully booked' ? 'This sample activity is fully booked.' : 'Registration for this sample activity is closed.'); return; }
+    if (!currentUser) { pendingActivityId=id; openAuth('login'); return; }
+    if (registrations().some(r=>r.activityId===id && r.userEmail===currentUser.email)) {
+      alert('You are already registered for this activity. Check your dashboard.');
+      return;
+    }
+    selectedActivityId=id;
+    $('#selectedActivity').innerHTML=`<b>${escapeHTML(a.title)}</b>${dateLabel(a.date)} · ${a.start}–${a.end} WIB · ${escapeHTML(a.location)}`;
+    const form=$('#activityRegistrationForm');
+    form.elements.name.value=currentUser.name;
+    form.elements.email.value=currentUser.email;
+    $('#registrationSession').innerHTML=a.sessions.map(s=>`<option value="${escapeHTML(s)}">${escapeHTML(s)}</option>`).join('');
+    setMessage('registrationMessage','');
+    registrationDialog.showModal();
+  }
+
+  // Open and close dialogs.
+  $('#authOpenBtn').addEventListener('click',()=>openAuth('login'));
+  $('#navUserBtn').addEventListener('click',()=>document.getElementById('dashboard').scrollIntoView({behavior:'smooth'}));
+  $('#dashboardLoginBtn')?.addEventListener('click',()=>openAuth('login'));
+  $('#dashboardContent').addEventListener('click',e=>{
+    if (e.target.id==='dashboardLoginBtn') openAuth('login');
+    if (e.target.id==='dashboardLogout') logout();
+    if (e.target.id==='dashboardEditInterests') openInterests();
+    const cancel=e.target.closest('[data-cancel]');
+    if (cancel) {
+      const id=cancel.dataset.cancel;
+      const remaining=registrations().filter(r=>r.id!==id);
+      writeStore(STORE_REGS,remaining);
+      updateUI();
+    }
+  });
+  $$('[data-close-dialog]').forEach(btn=>btn.addEventListener('click',()=>btn.closest('dialog').close()));
+  [authDialog,detailDialog,registrationDialog,interestsDialog].forEach(d=>d.addEventListener('click',e=>{if(e.target===d)d.close();}));
+  $$('[data-auth-mode]').forEach(btn=>btn.addEventListener('click',()=>setAuthMode(btn.dataset.authMode)));
+  $('#forgotPasswordBtn').addEventListener('click',()=>setMessage('loginMessage','Password reset email is not available in this offline demo. A real version needs a verified email service and secure auth provider.'));
+  $('#eventGrid').addEventListener('click',eventGridAction);
+  $('#recommendedGrid').addEventListener('click',eventGridAction);
+  function eventGridAction(e) {
+    const view=e.target.closest('[data-view]');
+    const join=e.target.closest('[data-join]');
+    if(view) renderDetail(view.dataset.view);
+    if(join) startRegistration(join.dataset.join);
+  }
+  $('#eventFilter').addEventListener('change',renderEvents);
+  $('#chooseInterestsBtn').addEventListener('click',openInterests);
+  $('#editInterestsBtn').addEventListener('click',openInterests);
+
+  function openInterests() {
+    if (!currentUser) { openAuth('register'); return; }
+    const form=$('#interestsForm');
+    $$('input[name="interests"]',form).forEach(i=>i.checked=(currentUser.interests||[]).includes(i.value));
+    setMessage('interestsMessage','');
+    interestsDialog.showModal();
+  }
+
+  // Account creation: browser-only prototype. Never use real credentials here.
+  $('#registerForm').addEventListener('submit',async e=>{
+    e.preventDefault();
+    const form=e.currentTarget;
+    const name=form.elements.name.value.trim();
+    const email=normaliseEmail(form.elements.email.value);
+    const password=form.elements.password.value;
+    const location=form.elements.location.value.trim();
+    const bio=form.elements.bio.value.trim();
+    const interests=$$('input[name="interests"]:checked',form).map(i=>i.value);
+    if (name.length<2 || !email || password.length<8 || location.length<2) {
+      setMessage('registerMessage','Please complete each required field. Your password must contain at least 8 characters.'); return;
+    }
+    if (users().some(u=>u.email===email)) { setMessage('registerMessage','An account with this email already exists. Please log in instead.'); return; }
+    const submit=form.querySelector('[type=submit]');
+    submit.disabled=true; submit.textContent='Creating account…';
+    try {
+      const salt=randomSalt();
+      const hash=await passwordVerifier(password,salt);
+      const user={name,email,location,bio,interests,salt,passwordHash:hash,createdAt:new Date().toISOString()};
+      writeStore(STORE_USERS,[...users(),user]);
+      saveUser(user,false);
+      authDialog.close();
+      form.reset();
+      updateUI();
+      if (pendingActivityId) { const id=pendingActivityId; pendingActivityId=null; startRegistration(id); }
+      else document.getElementById('dashboard').scrollIntoView({behavior:'smooth'});
+    } catch(err) {
+      setMessage('registerMessage',err.message || 'Could not create the demo account.');
+    } finally {
+      submit.disabled=false; submit.textContent='Create demo account ↗';
+    }
+  });
+
+  $('#loginForm').addEventListener('submit',async e=>{
+    e.preventDefault();
+    const form=e.currentTarget;
+    const email=normaliseEmail(form.elements.email.value);
+    const password=form.elements.password.value;
+    const user=users().find(u=>u.email===email);
+    if (!user) { setMessage('loginMessage','No demo account was found for that email. Create an account first.'); return; }
+    const submit=form.querySelector('[type=submit]');
+    submit.disabled=true; submit.textContent='Signing in…';
+    try {
+      const hash=await passwordVerifier(password,user.salt);
+      if (hash!==user.passwordHash) { setMessage('loginMessage','The password does not match this demo account.'); return; }
+      const pending= pendingActivityId;
+      saveUser(user,form.elements.remember.checked);
+      authDialog.close();
+      if (pending) { pendingActivityId=null; startRegistration(pending); }
+      else document.getElementById('dashboard').scrollIntoView({behavior:'smooth'});
+    } catch(err) {
+      setMessage('loginMessage',err.message || 'Could not sign in.');
+    } finally {
+      submit.disabled=false; submit.textContent='Login ↗';
+    }
+  });
+
+  $('#activityRegistrationForm').addEventListener('submit',e=>{
+    e.preventDefault();
+    const form=e.currentTarget;
+    const a=activities.find(x=>x.id===selectedActivityId);
+    if (!a || !currentUser) return;
+    const state=eventState(a);
+    if (state.cls) { setMessage('registrationMessage','This activity is no longer accepting registrations.'); return; }
+    if (registrations().some(r=>r.activityId===a.id && r.userEmail===currentUser.email)) {
+      setMessage('registrationMessage','You are already registered for this activity.'); return;
+    }
+    if (state.count>=a.capacity) { setMessage('registrationMessage','Sorry, this sample activity has reached capacity.'); renderEvents(); return; }
+    const record={
+      id:crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(16).slice(2)}`,
+      activityId:a.id,userEmail:currentUser.email,name:form.elements.name.value.trim(),
+      email:normaliseEmail(form.elements.email.value),phone:form.elements.phone.value.trim(),
+      session:form.elements.session.value,experience:form.elements.experience.value.trim(),
+      notes:form.elements.notes.value.trim(),status:'Registered',createdAt:new Date().toISOString()
+    };
+    if (!record.name || !record.email || !record.phone) { setMessage('registrationMessage','Please complete the required fields.'); return; }
+    writeStore(STORE_REGS,[...registrations(),record]);
+    registrationDialog.close();
+    form.reset();
+    updateUI();
+    document.getElementById('dashboard').scrollIntoView({behavior:'smooth'});
+    alert('Registration saved in this browser demo. Remember to confirm real event details with the organiser.');
+  });
+
+  $('#interestsForm').addEventListener('submit',e=>{
+    e.preventDefault();
+    if (!currentUser) return;
+    currentUser.interests=$$('input[name="interests"]:checked',e.currentTarget).map(i=>i.value);
+    const all=users().map(u=>u.email===currentUser.email?currentUser:u);
+    writeStore(STORE_USERS,all);
+    interestsDialog.close();
+    updateUI();
+  });
+
+  // Keep the menu's active marker aligned with the new sections.
+  const tracked=['home','explore','testimonials','about','dashboard'];
+  if ('IntersectionObserver' in window) {
+    const observer=new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(!entry.isIntersecting)return;
+        $$('.nav-link').forEach(a=>a.classList.toggle('active',a.getAttribute('href')===`#${entry.target.id}`));
+      });
+    },{rootMargin:'-35% 0px -55% 0px'});
+    tracked.forEach(id=>{const section=document.getElementById(id);if(section)observer.observe(section);});
+  }
+  // The first script wires the mobile menu; these links include buttons as well.
+  $$('.main-nav a,.main-nav button').forEach(el=>el.addEventListener('click',()=>{
+    $('#mainNav').classList.remove('open');
+    $('#menuToggle').setAttribute('aria-expanded','false');
+  }));
+
+  restoreSession();
+  updateUI();
+})();
+</script>
+
 </body>
 </html>
