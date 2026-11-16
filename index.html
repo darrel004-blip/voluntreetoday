@@ -1104,7 +1104,7 @@ body.lb-open{overflow:hidden}
     submit.disabled = true;
     submit.textContent = 'Creating account…';
     try {
-      const redirectTo = window.location.origin + window.location.pathname;
+      const redirectTo = "https://darrel004-blip.github.io/voluntreetoday/";
       const { data, error } = await supabaseClient.auth.signUp({
         email,
         password,
